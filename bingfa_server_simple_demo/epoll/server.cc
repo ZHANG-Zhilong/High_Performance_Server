@@ -31,8 +31,10 @@ int main(void){
 	struct epoll_event tep, ep[OPEN_MAX];	//tep: param@epoll_ctl, ep[] param@epoll_wait
 
 	listenfd = Socket(AF_INET, SOCK_STREAM, 0);
+
 	int opt = 1;
 	setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));  //reuse port
+
 	bzero(&serv_addr,sizeof(serv_addr));
 	serv_addr.sin_family = AF_INET;
 	serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
@@ -41,27 +43,17 @@ int main(void){
 
 	Bind(listenfd, (struct sockaddr*) &serv_addr, sizeof(serv_addr));
 	Listen(listenfd, OPEN_MAX);
-	efd = epoll_create(OPEN_MAX);  //创建epoll模型，efd指向红黑树根节点
-	if(efd == -1){
-		cerr<<"epoll_create error"<<endl;
-		exit(1);
-	}
+	efd = Epoll_create(OPEN_MAX);  //创建epoll模型，efd为红黑树根节点
+	
+
 	tep.events = EPOLLIN;  			//指定lfd的监听事件为读
 	tep.data.fd = listenfd;		
-	int ret = epoll_ctl(efd, EPOLL_CTL_ADD, listenfd, &tep);
-									//将lfd及对应的结构体注册到树, efd可找到该树
-	if(ret ==-1){
-		cerr<<"epoll_ctl error"<<endl;
-		exit(1);
-	}
+	int ret = Epoll_ctl(efd, EPOLL_CTL_ADD, listenfd, &tep);//注册lfd及对应结构体
+	
 	while(1){
 		//epoll 为server阻塞监听事件，ep为struct epoll_event类型数组
 		//OPEN_MAX为数组容量，-1表永久阻塞
 		int nready = epoll_wait(efd, ep, OPEN_MAX, -1);
-		if(nready == -1){
-			cerr<<"epoll_wait error"<<endl;
-			exit(1);
-		}
 
 		for(int i = 0; i< nready; i++){
 			
@@ -77,19 +69,14 @@ int main(void){
 					<<"port: "<<ntohs(clie_addr.sin_port);
 				tep.events = EPOLLIN;
 				tep.data.fd = clientfd;
-				int ret = epoll_ctl(efd, EPOLL_CTL_ADD, clientfd, &tep);
-				if(ret == -1){
-					perr_exit("epoll_ctl error");
-				}
+				int ret = Epoll_ctl(efd, EPOLL_CTL_ADD, clientfd, &tep);
+
 			}else{							//not listenfd ,客户端有数据流入
 				int sockfd = ep[i].data.fd;
 				int n = Read(sockfd, buf, sizeof(buf));
 
 				if(n == 0){     				//client closed the connection.
-					int ret = epoll_ctl(efd, EPOLL_CTL_DEL, sockfd, NULL);
-					if(ret == -1){
-						perr_exit("epoll_ctl error");
-					}
+					int ret = Epoll_ctl(efd, EPOLL_CTL_DEL, sockfd, NULL);
 					Close(sockfd);
 					cout<<"client closed, id: "<<sockfd<<endl;
 				}else if(n < 0){    //client error

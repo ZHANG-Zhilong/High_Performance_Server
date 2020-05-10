@@ -1,12 +1,14 @@
+#include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <errno.h>
 #include <sys/socket.h>
+#include <sys/epoll.h>
 
 void perr_exit(const char *s)
 {
-	perror(s);
+	cerr<<s<<endl;
 	exit(-1);
 }
 
@@ -196,3 +198,31 @@ ssize_t Readline(int fd, void *vptr, size_t maxlen)
 	return n;
 }
 
+int Epoll_create(int size){
+	int efd = epoll_create(OPEN_MAX);  
+	if(efd == -1){
+		cerr<<"epoll_create error"<<endl;
+		exit(1);
+	}
+	return efd;
+}
+
+int Epoll_ctl(int epfd, int opt, int fd, struct epoll_event* events){
+	int ret = epoll_ctl(efd, EPOLL_CTL_ADD, listenfd, &tep);//注册lfd及对应结构体
+	if(ret ==-1){
+		cerr<<"epoll_ctl error"<<endl;
+		exit(1);
+	}
+	return ret;
+}
+
+int Epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout){
+	int nready = epoll_wait(efd, ep, OPEN_MAX, -1);
+	if(nready == -1){
+		cerr<<"epoll_wait error"<<endl;
+		exit(1);
+	}	
+	return nready;
+}
+
+	
