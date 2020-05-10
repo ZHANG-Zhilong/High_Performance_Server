@@ -5,6 +5,7 @@
 #include <errno.h>
 #include <sys/socket.h>
 #include <sys/epoll.h>
+using namespace std;
 
 void perr_exit(const char *s)
 {
@@ -199,7 +200,7 @@ ssize_t Readline(int fd, void *vptr, size_t maxlen)
 }
 
 int Epoll_create(int size){
-	int efd = epoll_create(OPEN_MAX);  
+	int efd = epoll_create(size);  
 	if(efd == -1){
 		cerr<<"epoll_create error"<<endl;
 		exit(1);
@@ -208,7 +209,7 @@ int Epoll_create(int size){
 }
 
 int Epoll_ctl(int epfd, int opt, int fd, struct epoll_event* events){
-	int ret = epoll_ctl(efd, EPOLL_CTL_ADD, listenfd, &tep);//注册lfd及对应结构体
+	int ret = epoll_ctl(epfd, opt, fd, events);//注册lfd及对应结构体
 	if(ret ==-1){
 		cerr<<"epoll_ctl error"<<endl;
 		exit(1);
@@ -217,7 +218,7 @@ int Epoll_ctl(int epfd, int opt, int fd, struct epoll_event* events){
 }
 
 int Epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout){
-	int nready = epoll_wait(efd, ep, OPEN_MAX, -1);
+	int nready = epoll_wait(epfd, events, maxevents, timeout);
 	if(nready == -1){
 		cerr<<"epoll_wait error"<<endl;
 		exit(1);
