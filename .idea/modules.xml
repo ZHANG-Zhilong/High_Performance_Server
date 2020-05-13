@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/High_Performance_Server.iml" filepath="$PROJECT_DIR$/.idea/High_Performance_Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/High_PerFormance_Server.iml" filepath="$PROJECT_DIR$/.idea/High_PerFormance_Server.iml" />
     </modules>
   </component>
 </project>

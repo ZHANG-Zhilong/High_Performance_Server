@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="High_Performance_Server" targetName="High_Performance_Server" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -9,7 +29,65 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e4f021d-7280-4e3e-8f50-4c3c837b9bbd" name="默认的" comment="" />
+    <list default="true" id="65ea18a1-24eb-4eea-87aa-573423f99119" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/.clion.source.upload.marker" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/High_Performance_Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/High_Performance_Server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/include/wrap.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/include/wrap.cc.z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/include/wrap.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/include/wrap.h.z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/server.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/static_lib_usecase/hello.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/static_lib_usecase/hello.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/static_lib_usecase/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/static_lib_usecase/use_hello.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/include/wrap.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/include/wrap.cc.z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/include/wrap.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/include/wrap.h.z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/server.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/static_lib_usecase/hello.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/static_lib_usecase/hello.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/static_lib_usecase/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/static_lib_usecase/use_hello.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/include/wrap.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/include/wrap.cc.z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/include/wrap.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/include/wrap.h.z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/server.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/static_lib_usecase/hello.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/static_lib_usecase/hello.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/static_lib_usecase/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/static_lib_usecase/use_hello.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bsModel/client" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bsModel/client.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bsModel/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bsModel/server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bsModel/server.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample1/include/wrap.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample1/include/wrap.cc.z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample1/include/wrap.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample1/include/wrap.h.z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample1/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample1/server.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample1/static_lib_usecase/hello.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample1/static_lib_usecase/hello.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample1/static_lib_usecase/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample1/static_lib_usecase/use_hello.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,37 +96,104 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1biS8fFPBUIrb7z3yX2HEjhzOuk" />
+  <component name="ProjectId" id="1bpmjQgYwaIV2wqxd0Ij1s6RAi6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="新增" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/history_version" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="High_Performance_Server" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="High_Performance_Server" TARGET_NAME="High_Performance_Server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="High_Performance_Server" RUN_TARGET_NAME="High_Performance_Server">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3e4f021d-7280-4e3e-8f50-4c3c837b9bbd" name="默认的" comment="" />
-      <created>1589113262467</created>
+      <changelist id="65ea18a1-24eb-4eea-87aa-573423f99119" name="默认的" comment="" />
+      <created>1589337543596</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1589113262467</updated>
-      <workItem from="1589113264396" duration="91000" />
+      <updated>1589337543596</updated>
+      <workItem from="1589337544883" duration="539000" />
+      <workItem from="1589338154896" duration="345000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="318" y="120" key="#选项" timestamp="1589337975690">
+      <screen x="40" y="23" width="1304" height="817" />
+    </state>
+    <state x="318" y="120" key="#选项/40.23.1304.817@40.23.1304.817" timestamp="1589337975690" />
+    <state x="121" y="80" width="1104" height="617" key="DirDiffDialog" timestamp="1589338084025">
+      <screen x="40" y="23" width="1304" height="817" />
+    </state>
+    <state x="121" y="80" width="1104" height="617" key="DirDiffDialog/40.23.1304.817@40.23.1304.817" timestamp="1589338084025" />
+    <state width="1262" height="211" key="GridCell.Tab.0.bottom" timestamp="1589338084015">
+      <screen x="40" y="23" width="1304" height="817" />
+    </state>
+    <state width="1262" height="211" key="GridCell.Tab.0.bottom/40.23.1304.817@40.23.1304.817" timestamp="1589338084015" />
+    <state width="1262" height="211" key="GridCell.Tab.0.center" timestamp="1589338084014">
+      <screen x="40" y="23" width="1304" height="817" />
+    </state>
+    <state width="1262" height="211" key="GridCell.Tab.0.center/40.23.1304.817@40.23.1304.817" timestamp="1589338084014" />
+    <state width="1262" height="211" key="GridCell.Tab.0.left" timestamp="1589338084013">
+      <screen x="40" y="23" width="1304" height="817" />
+    </state>
+    <state width="1262" height="211" key="GridCell.Tab.0.left/40.23.1304.817@40.23.1304.817" timestamp="1589338084013" />
+    <state width="1262" height="211" key="GridCell.Tab.0.right" timestamp="1589338084014">
+      <screen x="40" y="23" width="1304" height="817" />
+    </state>
+    <state width="1262" height="211" key="GridCell.Tab.0.right/40.23.1304.817@40.23.1304.817" timestamp="1589338084014" />
+    <state x="193" y="70" key="SettingsEditor" timestamp="1589338191003">
+      <screen x="40" y="23" width="1304" height="817" />
+    </state>
+    <state x="193" y="70" key="SettingsEditor/40.23.1304.817@40.23.1304.817" timestamp="1589338191003" />
+    <state x="582" y="171" key="ftp.server.browser" timestamp="1589338187731">
+      <screen x="40" y="23" width="1304" height="817" />
+    </state>
+    <state x="582" y="171" key="ftp.server.browser/40.23.1304.817@40.23.1304.817" timestamp="1589338187731" />
   </component>
 </project>
