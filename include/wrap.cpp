@@ -4,12 +4,11 @@
 
 #include "wrap.h"
 #include <iostream>
-#include <stdlib.h>
-#include <stdio.h>
 #include <unistd.h>
-#include <errno.h>
 #include <sys/socket.h>
 #include <sys/epoll.h>
+#include <cerrno>
+#include <cstring>
 using namespace std;
 
 void perror_exit(const char *s)
@@ -32,13 +31,13 @@ int Accept(int fd, struct sockaddr *sa, socklen_t *salenptr)
     return n;
 }
 
-int Bind(int fd, const struct sockaddr *sa, socklen_t salen)
+int Bind(int fd, const struct sockaddr *sa, socklen_t socklen)
 {
     int n;
-
-    if ((n = bind(fd, sa, salen)) < 0)
+    if ((n = bind(fd, sa, socklen)) < 0){
         perror_exit("bind error");
-
+        printf("bind error  %s",  strerror(errno));
+    }
     return n;
 }
 
@@ -112,7 +111,7 @@ int Close(int fd)
 }
 
 /*参三: 应该读取的字节数*/                          //socket 4096  readn(cfd, buf, 4096)   nleft = 4096-1500
-ssize_t Readn(int fd, void *vptr, size_t n)
+ssize_t Read_nline(int fd, void *vptr, size_t n)
 {
     size_t  nleft;              //usigned int 剩余未读取的字节数
     ssize_t nread;              //int 实际读到的字节数
@@ -205,12 +204,11 @@ ssize_t Readline(int fd, void *vptr, size_t maxlen)
 }
 
 int Epoll_create(int size){
-    int efd = epoll_create(size);
-    if(efd == -1){
-        cerr<<"epoll_create error"<<endl;
-        exit(1);
+    int epfd = epoll_create(size);
+    if(epfd <=0){
+        printf("create efd in %s err %s\n", __func__, strerror(errno));
     }
-    return efd;
+    return epfd;
 }
 
 int Epoll_ctl(int epfd, int opt, int fd, struct epoll_event* events){
@@ -222,13 +220,13 @@ int Epoll_ctl(int epfd, int opt, int fd, struct epoll_event* events){
     return ret;
 }
 
-int Epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout){
-    int nready = epoll_wait(epfd, events, maxevents, timeout);
-    if(nready == -1){
-        cerr<<"epoll_wait error"<<endl;
+int Epoll_wait(int epfd, struct epoll_event* events, int max_events, int timeout){
+    int ready_fds = epoll_wait(epfd, events, max_events, timeout);
+    if(ready_fds == -1){
+        printf("epoll_wait error in %s, errno: %s", __func__, strerror(errno));
         exit(1);
     }
-    return nready;
+    return ready_fds;
 }
 
 

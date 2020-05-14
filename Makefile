@@ -54,7 +54,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/zhangzhilong/High_Performance_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhangzhilong/High_Performance_Server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/zhangzhilong/High_Performance_Server
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -73,7 +73,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/bin/cmake-3.16.6-Linux-x86_64/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake-3.16.6-Linux-x86_64/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -83,9 +83,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles /home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangzhilong/High_Performance_Server/CMakeFiles /home/zhangzhilong/High_Performance_Server/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangzhilong/High_Performance_Server/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

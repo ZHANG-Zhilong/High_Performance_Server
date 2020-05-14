@@ -112,7 +112,7 @@ int Close(int fd)
 }
 
 /*参三: 应该读取的字节数*/                          //socket 4096  readn(cfd, buf, 4096)   nleft = 4096-1500
-ssize_t Readn(int fd, void *vptr, size_t n)
+ssize_t Read_nline(int fd, void *vptr, size_t n)
 {
     size_t  nleft;              //usigned int 剩余未读取的字节数
     ssize_t nread;              //int 实际读到的字节数

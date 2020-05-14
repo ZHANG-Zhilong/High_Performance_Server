@@ -30,63 +30,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65ea18a1-24eb-4eea-87aa-573423f99119" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/.clion.source.upload.marker" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/High_Performance_Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/High_Performance_Server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/zhangzhilong.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/epoll_tool.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/epoll_tool.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refer/server.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refer/server.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refer/server_final.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/include/wrap.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/include/wrap.cc.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/include/wrap.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/include/wrap.h.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/server.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/static_lib_usecase/hello.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/static_lib_usecase/hello.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/static_lib_usecase/makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/epoll/static_lib_usecase/use_hello.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/include/wrap.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/include/wrap.cc.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/include/wrap.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/include/wrap.h.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/server.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/static_lib_usecase/hello.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/static_lib_usecase/hello.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/static_lib_usecase/makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_progress_server/static_lib_usecase/use_hello.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/include/wrap.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/include/wrap.cc.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/include/wrap.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/include/wrap.h.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/server.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/static_lib_usecase/hello.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/static_lib_usecase/hello.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/static_lib_usecase/makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bingfa_server_simple_demo/multi_thread_server/static_lib_usecase/use_hello.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bsModel/client" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bsModel/client.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bsModel/makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bsModel/server" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bsModel/server.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample1/include/wrap.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample1/include/wrap.cc.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample1/include/wrap.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample1/include/wrap.h.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample1/makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample1/server.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample1/static_lib_usecase/hello.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample1/static_lib_usecase/hello.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample1/static_lib_usecase/makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample1/static_lib_usecase/use_hello.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/history_version/epoll_unblock/wrap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/epoll_unblock/wrap.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/history_version/epoll_unblock/wrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/epoll_unblock/wrap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrap.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/wrap.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/wrap.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,12 +89,29 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/refer" />
+      <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/history_version" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -140,7 +133,8 @@
       <option name="presentableId" value="Default" />
       <updated>1589337543596</updated>
       <workItem from="1589337544883" duration="539000" />
-      <workItem from="1589338154896" duration="345000" />
+      <workItem from="1589338154896" duration="24005000" />
+      <workItem from="1589375832431" duration="12340000" />
     </task>
     <servers />
   </component>
@@ -163,37 +157,92 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="272" y="84" key="#SSH_Configurations" timestamp="1589415006590">
+      <screen x="37" y="23" width="1307" height="817" />
+    </state>
+    <state x="272" y="84" key="#SSH_Configurations/37.23.1307.817@37.23.1307.817" timestamp="1589415006590" />
+    <state x="491" y="242" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589370855021">
+      <screen x="37" y="23" width="1307" height="817" />
+    </state>
+    <state x="491" y="242" key="#com.intellij.fileTypes.FileTypeChooser/37.23.1307.817@37.23.1307.817" timestamp="1589370855021" />
     <state x="318" y="120" key="#选项" timestamp="1589337975690">
       <screen x="40" y="23" width="1304" height="817" />
     </state>
     <state x="318" y="120" key="#选项/40.23.1304.817@40.23.1304.817" timestamp="1589337975690" />
-    <state x="121" y="80" width="1104" height="617" key="DirDiffDialog" timestamp="1589338084025">
-      <screen x="40" y="23" width="1304" height="817" />
+    <state x="45" y="31" width="1291" height="801" maximized="true" key="DiffContextDialog" timestamp="1589386760662">
+      <screen x="37" y="23" width="1307" height="817" />
     </state>
+    <state x="45" y="31" width="1291" height="801" maximized="true" key="DiffContextDialog/37.23.1307.817@37.23.1307.817" timestamp="1589386760662" />
+    <state x="118" y="80" width="1107" height="617" key="DirDiffDialog" timestamp="1589377238464">
+      <screen x="37" y="23" width="1307" height="817" />
+    </state>
+    <state x="118" y="80" width="1107" height="617" key="DirDiffDialog/37.23.1307.817@37.23.1307.817" timestamp="1589377238464" />
+    <state x="119" y="80" width="1106" height="617" key="DirDiffDialog/38.23.1306.817@38.23.1306.817" timestamp="1589364096621" />
     <state x="121" y="80" width="1104" height="617" key="DirDiffDialog/40.23.1304.817@40.23.1304.817" timestamp="1589338084025" />
-    <state width="1262" height="211" key="GridCell.Tab.0.bottom" timestamp="1589338084015">
-      <screen x="40" y="23" width="1304" height="817" />
+    <state width="1262" height="169" key="GridCell.Tab.0.bottom" timestamp="1589386687641">
+      <screen x="37" y="23" width="1307" height="817" />
     </state>
+    <state width="1262" height="169" key="GridCell.Tab.0.bottom/37.23.1307.817@37.23.1307.817" timestamp="1589386687641" />
+    <state width="1262" height="211" key="GridCell.Tab.0.bottom/38.23.1306.817@38.23.1306.817" timestamp="1589364798801" />
     <state width="1262" height="211" key="GridCell.Tab.0.bottom/40.23.1304.817@40.23.1304.817" timestamp="1589338084015" />
-    <state width="1262" height="211" key="GridCell.Tab.0.center" timestamp="1589338084014">
-      <screen x="40" y="23" width="1304" height="817" />
+    <state width="1262" height="169" key="GridCell.Tab.0.center" timestamp="1589386687641">
+      <screen x="37" y="23" width="1307" height="817" />
     </state>
+    <state width="1262" height="169" key="GridCell.Tab.0.center/37.23.1307.817@37.23.1307.817" timestamp="1589386687641" />
+    <state width="1262" height="211" key="GridCell.Tab.0.center/38.23.1306.817@38.23.1306.817" timestamp="1589364798800" />
     <state width="1262" height="211" key="GridCell.Tab.0.center/40.23.1304.817@40.23.1304.817" timestamp="1589338084014" />
-    <state width="1262" height="211" key="GridCell.Tab.0.left" timestamp="1589338084013">
-      <screen x="40" y="23" width="1304" height="817" />
+    <state width="1262" height="169" key="GridCell.Tab.0.left" timestamp="1589386687641">
+      <screen x="37" y="23" width="1307" height="817" />
     </state>
+    <state width="1262" height="169" key="GridCell.Tab.0.left/37.23.1307.817@37.23.1307.817" timestamp="1589386687641" />
+    <state width="1262" height="211" key="GridCell.Tab.0.left/38.23.1306.817@38.23.1306.817" timestamp="1589364798799" />
     <state width="1262" height="211" key="GridCell.Tab.0.left/40.23.1304.817@40.23.1304.817" timestamp="1589338084013" />
-    <state width="1262" height="211" key="GridCell.Tab.0.right" timestamp="1589338084014">
-      <screen x="40" y="23" width="1304" height="817" />
+    <state width="1262" height="169" key="GridCell.Tab.0.right" timestamp="1589386687641">
+      <screen x="37" y="23" width="1307" height="817" />
     </state>
+    <state width="1262" height="169" key="GridCell.Tab.0.right/37.23.1307.817@37.23.1307.817" timestamp="1589386687641" />
+    <state width="1262" height="211" key="GridCell.Tab.0.right/38.23.1306.817@38.23.1306.817" timestamp="1589364798800" />
     <state width="1262" height="211" key="GridCell.Tab.0.right/40.23.1304.817@40.23.1304.817" timestamp="1589338084014" />
-    <state x="193" y="70" key="SettingsEditor" timestamp="1589338191003">
-      <screen x="40" y="23" width="1304" height="817" />
+    <state width="1262" height="228" key="GridCell.Tab.1.bottom" timestamp="1589386182116">
+      <screen x="37" y="23" width="1307" height="817" />
     </state>
+    <state width="1262" height="228" key="GridCell.Tab.1.bottom/37.23.1307.817@37.23.1307.817" timestamp="1589386182116" />
+    <state width="1262" height="262" key="GridCell.Tab.1.bottom/38.23.1306.817@38.23.1306.817" timestamp="1589363268873" />
+    <state width="1262" height="228" key="GridCell.Tab.1.center" timestamp="1589386182116">
+      <screen x="37" y="23" width="1307" height="817" />
+    </state>
+    <state width="1262" height="228" key="GridCell.Tab.1.center/37.23.1307.817@37.23.1307.817" timestamp="1589386182116" />
+    <state width="1262" height="262" key="GridCell.Tab.1.center/38.23.1306.817@38.23.1306.817" timestamp="1589363268873" />
+    <state width="1262" height="228" key="GridCell.Tab.1.left" timestamp="1589386182115">
+      <screen x="37" y="23" width="1307" height="817" />
+    </state>
+    <state width="1262" height="228" key="GridCell.Tab.1.left/37.23.1307.817@37.23.1307.817" timestamp="1589386182115" />
+    <state width="1262" height="262" key="GridCell.Tab.1.left/38.23.1306.817@38.23.1306.817" timestamp="1589363268873" />
+    <state width="1262" height="228" key="GridCell.Tab.1.right" timestamp="1589386182116">
+      <screen x="37" y="23" width="1307" height="817" />
+    </state>
+    <state width="1262" height="228" key="GridCell.Tab.1.right/37.23.1307.817@37.23.1307.817" timestamp="1589386182116" />
+    <state width="1262" height="262" key="GridCell.Tab.1.right/38.23.1306.817@38.23.1306.817" timestamp="1589363268873" />
+    <state x="190" y="70" key="SettingsEditor" timestamp="1589415609863">
+      <screen x="37" y="23" width="1307" height="817" />
+    </state>
+    <state x="190" y="70" key="SettingsEditor/37.23.1307.817@37.23.1307.817" timestamp="1589415609863" />
     <state x="193" y="70" key="SettingsEditor/40.23.1304.817@40.23.1304.817" timestamp="1589338191003" />
     <state x="582" y="171" key="ftp.server.browser" timestamp="1589338187731">
       <screen x="40" y="23" width="1304" height="817" />
     </state>
     <state x="582" y="171" key="ftp.server.browser/40.23.1304.817@40.23.1304.817" timestamp="1589338187731" />
+    <state width="600" height="440" key="javadoc.popup" timestamp="1589363828358">
+      <screen x="38" y="23" width="1306" height="817" />
+    </state>
+    <state width="600" height="440" key="javadoc.popup/38.23.1306.817@38.23.1306.817" timestamp="1589363828358" />
+    <state x="173" y="216" width="800" height="399" key="refactoring.ChangeSignatureDialog" timestamp="1589381265719">
+      <screen x="37" y="23" width="1307" height="817" />
+    </state>
+    <state x="173" y="216" width="800" height="399" key="refactoring.ChangeSignatureDialog/37.23.1307.817@37.23.1307.817" timestamp="1589381265719" />
+    <state x="357" y="164" width="670" height="676" key="search.everywhere.popup" timestamp="1589377449460">
+      <screen x="37" y="23" width="1307" height="817" />
+    </state>
+    <state x="357" y="164" width="670" height="676" key="search.everywhere.popup/37.23.1307.817@37.23.1307.817" timestamp="1589377449459" />
   </component>
 </project>

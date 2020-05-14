@@ -15,12 +15,12 @@ int Socket(int family, int type, int protocol);
 ssize_t Read(int fd, void *ptr, size_t nbytes);
 ssize_t Write(int fd, const void *ptr, size_t nbytes);
 int Close(int fd);
-ssize_t Readn(int fd, void *vptr, size_t n);
+ssize_t Read_nline(int fd, void *vptr, size_t n);
 ssize_t Writen(int fd, const void *vptr, size_t n);
 ssize_t my_read(int fd, char *ptr);
 ssize_t Readline(int fd, void *vptr, size_t maxlen);
 int Epoll_create(int size);
 int Epoll_ctl(int epfd, int op, int fd, struct epoll_event* events);
-int Epoll_wait(int epfd, struct epoll_event* events, int maxevents, int timeout);
+int Epoll_wait(int epfd, struct epoll_event* events, int max_events, int timeout);
 
 #endif //HIGH_PERFORMANCE_SERVER_WRAP_H
