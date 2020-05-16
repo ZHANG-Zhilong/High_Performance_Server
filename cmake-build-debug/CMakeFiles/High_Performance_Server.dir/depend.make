@@ -5,8 +5,12 @@ CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o: ../include/epol
 CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o: ../include/epoll_tool.h
 CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o: ../include/wrap.h
 
+CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.o: ../include/thread_pool.cpp
+CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.o: ../include/thread_pool.h
+
 CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o: ../include/wrap.cpp
 CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o: ../include/wrap.h
 
-CMakeFiles/High_Performance_Server.dir/server.cpp.o: ../server.cpp
+CMakeFiles/High_Performance_Server.dir/main.cpp.o: ../include/thread_pool.h
+CMakeFiles/High_Performance_Server.dir/main.cpp.o: ../main.cpp
 

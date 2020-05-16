@@ -7,10 +7,16 @@
       <w>epollin</w>
       <w>htonl</w>
       <w>inaddr</w>
+      <w>nonblocking</w>
       <w>perror</w>
+      <w>readn</w>
+      <w>readys</w>
       <w>retval</w>
       <w>serv</w>
       <w>sockaddr</w>
+      <w>threadpoll</w>
+      <w>threadpool</w>
+      <w>tids</w>
     </words>
   </dictionary>
 </component>

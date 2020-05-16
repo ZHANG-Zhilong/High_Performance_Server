@@ -2,15 +2,11 @@
 // Created by 张志龙 on 2020/5/13.
 //
 
-#include <cerrno>
-#include <sys/socket.h>
-#include <unistd.h>
-#include <iostream>
 #include <cstdio>
 #include <sys/epoll.h>
 #include <cstring>
 #include <ctime>
-#include "socket_tool.h"
+#include "wrap.h"
 #include "epoll_tool.h"
 
 
@@ -69,28 +65,3 @@ void event_remove(int epfd, struct my_event_t *my_event) {
     printf("event removed [fd=%d], events[%0x]\n", my_event->fd, my_event->events);
 }
 
-int Epoll_create(int size){
-    int epfd = epoll_create(size);
-    if(epfd <=0){
-        printf("create efd in %s err %s\n", __func__, strerror(errno));
-    }
-    return epfd;
-}
-
-int Epoll_ctl(int epfd, int opt, int fd, struct epoll_event* events){
-    int ret = epoll_ctl(epfd, opt, fd, events);//注册lfd及对应结构体
-    if(ret ==-1){
-        std::cerr << "epoll_ctl error" << std::endl;
-        exit(1);
-    }
-    return ret;
-}
-
-int Epoll_wait(int epfd, struct epoll_event* events, int max_events, int timeout){
-    int ready_fds = epoll_wait(epfd, events, max_events, timeout);
-    if(ready_fds == -1){
-        printf("epoll_wait error in %s, errno: %s", __func__, strerror(errno));
-        exit(1);
-    }
-    return ready_fds;
-}

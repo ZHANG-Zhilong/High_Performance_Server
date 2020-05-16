@@ -23,9 +23,6 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
-# Command-line flag to silence nested $(MAKE).
-$(VERBOSE)MAKESILENT = -s
-
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -42,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake-3.16.6-Linux-x86_64/bin/cmake
+CMAKE_COMMAND = /usr/local/clion-2020.1.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake-3.16.6-Linux-x86_64/bin/cmake -E remove -f
+RM = /usr/local/clion-2020.1.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zhangzhilong/High_Performance_Server
+CMAKE_SOURCE_DIR = /tmp/tmp.pYDmku85Kq
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhangzhilong/High_Performance_Server/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/tmp.pYDmku85Kq/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -62,7 +59,7 @@ CMAKE_BINARY_DIR = /home/zhangzhilong/High_Performance_Server/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake-3.16.6-Linux-x86_64/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/clion-2020.1.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -72,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/bin/cmake-3.16.6-Linux-x86_64/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/clion-2020.1.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -83,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles /home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles /tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -100,12 +97,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -118,12 +115,12 @@ depend:
 
 # Build rule for target.
 High_Performance_Server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 High_Performance_Server
+	$(MAKE) -f CMakeFiles/Makefile2 High_Performance_Server
 .PHONY : High_Performance_Server
 
 # fast build rule for target.
 High_Performance_Server/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/build
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/build
 .PHONY : High_Performance_Server/fast
 
 include/epoll_tool.o: include/epoll_tool.cpp.o
@@ -132,7 +129,7 @@ include/epoll_tool.o: include/epoll_tool.cpp.o
 
 # target to build an object file
 include/epoll_tool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o
 .PHONY : include/epoll_tool.cpp.o
 
 include/epoll_tool.i: include/epoll_tool.cpp.i
@@ -141,7 +138,7 @@ include/epoll_tool.i: include/epoll_tool.cpp.i
 
 # target to preprocess a source file
 include/epoll_tool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.i
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.i
 .PHONY : include/epoll_tool.cpp.i
 
 include/epoll_tool.s: include/epoll_tool.cpp.s
@@ -150,8 +147,62 @@ include/epoll_tool.s: include/epoll_tool.cpp.s
 
 # target to generate assembly for a file
 include/epoll_tool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.s
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.s
 .PHONY : include/epoll_tool.cpp.s
+
+include/thread_pool.o: include/thread_pool.cpp.o
+
+.PHONY : include/thread_pool.o
+
+# target to build an object file
+include/thread_pool.cpp.o:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.o
+.PHONY : include/thread_pool.cpp.o
+
+include/thread_pool.i: include/thread_pool.cpp.i
+
+.PHONY : include/thread_pool.i
+
+# target to preprocess a source file
+include/thread_pool.cpp.i:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.i
+.PHONY : include/thread_pool.cpp.i
+
+include/thread_pool.s: include/thread_pool.cpp.s
+
+.PHONY : include/thread_pool.s
+
+# target to generate assembly for a file
+include/thread_pool.cpp.s:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.s
+.PHONY : include/thread_pool.cpp.s
+
+include/util.o: include/util.cpp.o
+
+.PHONY : include/util.o
+
+# target to build an object file
+include/util.cpp.o:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/util.cpp.o
+.PHONY : include/util.cpp.o
+
+include/util.i: include/util.cpp.i
+
+.PHONY : include/util.i
+
+# target to preprocess a source file
+include/util.cpp.i:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/util.cpp.i
+.PHONY : include/util.cpp.i
+
+include/util.s: include/util.cpp.s
+
+.PHONY : include/util.s
+
+# target to generate assembly for a file
+include/util.cpp.s:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/util.cpp.s
+.PHONY : include/util.cpp.s
 
 include/wrap.o: include/wrap.cpp.o
 
@@ -159,7 +210,7 @@ include/wrap.o: include/wrap.cpp.o
 
 # target to build an object file
 include/wrap.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o
 .PHONY : include/wrap.cpp.o
 
 include/wrap.i: include/wrap.cpp.i
@@ -168,7 +219,7 @@ include/wrap.i: include/wrap.cpp.i
 
 # target to preprocess a source file
 include/wrap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.i
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.i
 .PHONY : include/wrap.cpp.i
 
 include/wrap.s: include/wrap.cpp.s
@@ -177,35 +228,35 @@ include/wrap.s: include/wrap.cpp.s
 
 # target to generate assembly for a file
 include/wrap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.s
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.s
 .PHONY : include/wrap.cpp.s
 
-server.o: server.cpp.o
+main.o: main.cpp.o
 
-.PHONY : server.o
+.PHONY : main.o
 
 # target to build an object file
-server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/server.cpp.o
-.PHONY : server.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-server.i: server.cpp.i
+main.i: main.cpp.i
 
-.PHONY : server.i
+.PHONY : main.i
 
 # target to preprocess a source file
-server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/server.cpp.i
-.PHONY : server.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-server.s: server.cpp.s
+main.s: main.cpp.s
 
-.PHONY : server.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/server.cpp.s
-.PHONY : server.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -219,12 +270,18 @@ help:
 	@echo "... include/epoll_tool.o"
 	@echo "... include/epoll_tool.i"
 	@echo "... include/epoll_tool.s"
+	@echo "... include/thread_pool.o"
+	@echo "... include/thread_pool.i"
+	@echo "... include/thread_pool.s"
+	@echo "... include/util.o"
+	@echo "... include/util.i"
+	@echo "... include/util.s"
 	@echo "... include/wrap.o"
 	@echo "... include/wrap.i"
 	@echo "... include/wrap.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

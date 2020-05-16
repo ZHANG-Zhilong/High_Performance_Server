@@ -18,9 +18,6 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
-# Command-line flag to silence nested $(MAKE).
-$(VERBOSE)MAKESILENT = -s
-
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -37,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake-3.16.6-Linux-x86_64/bin/cmake
+CMAKE_COMMAND = /usr/local/clion-2020.1.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake-3.16.6-Linux-x86_64/bin/cmake -E remove -f
+RM = /usr/local/clion-2020.1.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zhangzhilong/High_Performance_Server
+CMAKE_SOURCE_DIR = /tmp/tmp.pYDmku85Kq
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhangzhilong/High_Performance_Server/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/tmp.pYDmku85Kq/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/High_Performance_Server.dir/depend.make
@@ -60,60 +57,90 @@ include CMakeFiles/High_Performance_Server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/High_Performance_Server.dir/flags.make
 
-CMakeFiles/High_Performance_Server.dir/server.cpp.o: CMakeFiles/High_Performance_Server.dir/flags.make
-CMakeFiles/High_Performance_Server.dir/server.cpp.o: ../server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/High_Performance_Server.dir/server.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/High_Performance_Server.dir/server.cpp.o -c /home/zhangzhilong/High_Performance_Server/server.cpp
+CMakeFiles/High_Performance_Server.dir/main.cpp.o: CMakeFiles/High_Performance_Server.dir/flags.make
+CMakeFiles/High_Performance_Server.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/High_Performance_Server.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/High_Performance_Server.dir/main.cpp.o -c /tmp/tmp.pYDmku85Kq/main.cpp
 
-CMakeFiles/High_Performance_Server.dir/server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/High_Performance_Server.dir/server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangzhilong/High_Performance_Server/server.cpp > CMakeFiles/High_Performance_Server.dir/server.cpp.i
+CMakeFiles/High_Performance_Server.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/High_Performance_Server.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.pYDmku85Kq/main.cpp > CMakeFiles/High_Performance_Server.dir/main.cpp.i
 
-CMakeFiles/High_Performance_Server.dir/server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/High_Performance_Server.dir/server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangzhilong/High_Performance_Server/server.cpp -o CMakeFiles/High_Performance_Server.dir/server.cpp.s
+CMakeFiles/High_Performance_Server.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/High_Performance_Server.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.pYDmku85Kq/main.cpp -o CMakeFiles/High_Performance_Server.dir/main.cpp.s
+
+CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.o: CMakeFiles/High_Performance_Server.dir/flags.make
+CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.o: ../include/thread_pool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.o -c /tmp/tmp.pYDmku85Kq/include/thread_pool.cpp
+
+CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.pYDmku85Kq/include/thread_pool.cpp > CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.i
+
+CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.pYDmku85Kq/include/thread_pool.cpp -o CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.s
 
 CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o: CMakeFiles/High_Performance_Server.dir/flags.make
 CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o: ../include/wrap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o -c /home/zhangzhilong/High_Performance_Server/include/wrap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o -c /tmp/tmp.pYDmku85Kq/include/wrap.cpp
 
 CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangzhilong/High_Performance_Server/include/wrap.cpp > CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.pYDmku85Kq/include/wrap.cpp > CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.i
 
 CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangzhilong/High_Performance_Server/include/wrap.cpp -o CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.pYDmku85Kq/include/wrap.cpp -o CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.s
 
 CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o: CMakeFiles/High_Performance_Server.dir/flags.make
 CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o: ../include/epoll_tool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o -c /home/zhangzhilong/High_Performance_Server/include/epoll_tool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o -c /tmp/tmp.pYDmku85Kq/include/epoll_tool.cpp
 
 CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhangzhilong/High_Performance_Server/include/epoll_tool.cpp > CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.pYDmku85Kq/include/epoll_tool.cpp > CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.i
 
 CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhangzhilong/High_Performance_Server/include/epoll_tool.cpp -o CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.pYDmku85Kq/include/epoll_tool.cpp -o CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.s
+
+CMakeFiles/High_Performance_Server.dir/include/util.cpp.o: CMakeFiles/High_Performance_Server.dir/flags.make
+CMakeFiles/High_Performance_Server.dir/include/util.cpp.o: ../include/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/High_Performance_Server.dir/include/util.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/High_Performance_Server.dir/include/util.cpp.o -c /tmp/tmp.pYDmku85Kq/include/util.cpp
+
+CMakeFiles/High_Performance_Server.dir/include/util.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/High_Performance_Server.dir/include/util.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/tmp.pYDmku85Kq/include/util.cpp > CMakeFiles/High_Performance_Server.dir/include/util.cpp.i
+
+CMakeFiles/High_Performance_Server.dir/include/util.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/High_Performance_Server.dir/include/util.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/tmp.pYDmku85Kq/include/util.cpp -o CMakeFiles/High_Performance_Server.dir/include/util.cpp.s
 
 # Object files for target High_Performance_Server
 High_Performance_Server_OBJECTS = \
-"CMakeFiles/High_Performance_Server.dir/server.cpp.o" \
+"CMakeFiles/High_Performance_Server.dir/main.cpp.o" \
+"CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.o" \
 "CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o" \
-"CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o"
+"CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o" \
+"CMakeFiles/High_Performance_Server.dir/include/util.cpp.o"
 
 # External object files for target High_Performance_Server
 High_Performance_Server_EXTERNAL_OBJECTS =
 
-High_Performance_Server: CMakeFiles/High_Performance_Server.dir/server.cpp.o
+High_Performance_Server: CMakeFiles/High_Performance_Server.dir/main.cpp.o
+High_Performance_Server: CMakeFiles/High_Performance_Server.dir/include/thread_pool.cpp.o
 High_Performance_Server: CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o
 High_Performance_Server: CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.o
+High_Performance_Server: CMakeFiles/High_Performance_Server.dir/include/util.cpp.o
 High_Performance_Server: CMakeFiles/High_Performance_Server.dir/build.make
 High_Performance_Server: CMakeFiles/High_Performance_Server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable High_Performance_Server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable High_Performance_Server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/High_Performance_Server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -126,6 +153,6 @@ CMakeFiles/High_Performance_Server.dir/clean:
 .PHONY : CMakeFiles/High_Performance_Server.dir/clean
 
 CMakeFiles/High_Performance_Server.dir/depend:
-	cd /home/zhangzhilong/High_Performance_Server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zhangzhilong/High_Performance_Server /home/zhangzhilong/High_Performance_Server /home/zhangzhilong/High_Performance_Server/cmake-build-debug /home/zhangzhilong/High_Performance_Server/cmake-build-debug /home/zhangzhilong/High_Performance_Server/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tmp/tmp.pYDmku85Kq/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/tmp.pYDmku85Kq /tmp/tmp.pYDmku85Kq /tmp/tmp.pYDmku85Kq/cmake-build-debug /tmp/tmp.pYDmku85Kq/cmake-build-debug /tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/High_Performance_Server.dir/depend
 

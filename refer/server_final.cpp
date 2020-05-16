@@ -21,7 +21,7 @@ struct my_event_t g_events[OPEN_MAX + 1];     // +1 -->listen fd
 void accept_connection(int lfd, int events, void *arg);
 void receive_data(int fd, int events, void *my_event_s_arg);
 void send_data(int fd, int events, void *my_event_t_arg);
-void init_listen_socket(int epfd, u_short port);
+int init_listen_socket(int epfd, u_short port);
 
 void process_command_line(int argc, char* argv[]){
     for (int i = 0; i < argc; i++) {
@@ -133,7 +133,7 @@ void accept_connection(int lfd, int events, void *arg) {
            g_events[i].last_active, i);
 }
 
-void init_listen_socket(int epfd, u_short port) {
+int init_listen_socket(int epfd, u_short port) {
 
     int client_fd = Socket(AF_INET, SOCK_STREAM, 0);
     int flag = fcntl(client_fd, F_GETFL);    //set sock as unblock
