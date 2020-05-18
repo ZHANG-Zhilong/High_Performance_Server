@@ -6,6 +6,7 @@
 #include "util.h"
 #include <iostream>
 #include <sys/socket.h>
+#include <arpa/inet.h>
 #include <cerrno>
 #include <cstring>
 using namespace std;
@@ -71,8 +72,43 @@ int Socket(int family, int type, int protocol)
     return n;
 }
 
-/*参三: 应该读取的字节数*/                          //socket 4096  readn(cfd, buf, 4096)   nleft = 4096-1500
+/***************
+ * this function starts the process of listen for web connections
+ * on a specified port. if the port is 0, then dynamically allocate a
+ * port and modify the original port variable to reflect the actual port.
+ * @param port pointer to the variable containing the port to connect
+ * @param max_listen variable is the max num to listen
+ * @return  the socket
+ */
+int startup(u_short* port, const int max_listen){
+    int httpd;
+    int on = 1;
+    struct sockaddr_in name{};
 
-/*readline --- fgets*/
-
+    httpd = socket(AF_INET, SOCK_STREAM, 0);
+    if(httpd == -1){
+        err_die("socket");
+    }
+    memset(&name, 0, sizeof(name));
+    name.sin_family = AF_INET;
+    name.sin_addr.s_addr = htonl(INADDR_ANY);
+    name.sin_port = htons(*port);
+    if((setsockopt(httpd, SOL_SOCKET, SO_REUSEADDR,&on, sizeof(on)))<0){
+        err_die("setsocketopt failed.");
+    }
+    if(bind(httpd, (struct sockaddr*)&name, sizeof(name))<0){
+        err_die("bind failed");
+    }
+    if(*port == 0){
+        socklen_t namelen = sizeof(name);
+        if(getsockname(httpd, (struct sockaddr*)&name, &namelen)==-1){
+            err_die("getsockname");
+        }
+        *port = ntohs(name.sin_port);
+    }
+    if(listen(httpd, max_listen)<0){
+        err_die("listen");
+    }
+    return httpd;
+}
 

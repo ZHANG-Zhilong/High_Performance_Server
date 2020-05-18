@@ -48,10 +48,10 @@ RM = /usr/local/clion-2020.1.1/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/tmp.pYDmku85Kq
+CMAKE_SOURCE_DIR = /tmp/tmp.sgZYOaCSKT
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/tmp.pYDmku85Kq/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/tmp.sgZYOaCSKT/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles /tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.sgZYOaCSKT/cmake-build-debug/CMakeFiles /tmp/tmp.sgZYOaCSKT/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.pYDmku85Kq/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/tmp.sgZYOaCSKT/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Client
+
+# Build rule for target.
+Client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Client
+.PHONY : Client
+
+# fast build rule for target.
+Client/fast:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
+.PHONY : Client/fast
+
+#=============================================================================
 # Target rules for targets named High_Performance_Server
 
 # Build rule for target.
@@ -122,6 +135,33 @@ High_Performance_Server: cmake_check_build_system
 High_Performance_Server/fast:
 	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/build
 .PHONY : High_Performance_Server/fast
+
+client/client.o: client/client.cpp.o
+
+.PHONY : client/client.o
+
+# target to build an object file
+client/client.cpp.o:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/client/client.cpp.o
+.PHONY : client/client.cpp.o
+
+client/client.i: client/client.cpp.i
+
+.PHONY : client/client.i
+
+# target to preprocess a source file
+client/client.cpp.i:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/client/client.cpp.i
+.PHONY : client/client.cpp.i
+
+client/client.s: client/client.cpp.s
+
+.PHONY : client/client.s
+
+# target to generate assembly for a file
+client/client.cpp.s:
+	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/client/client.cpp.s
+.PHONY : client/client.cpp.s
 
 include/epoll_tool.o: include/epoll_tool.cpp.o
 
@@ -149,6 +189,60 @@ include/epoll_tool.s: include/epoll_tool.cpp.s
 include/epoll_tool.cpp.s:
 	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/epoll_tool.cpp.s
 .PHONY : include/epoll_tool.cpp.s
+
+include/request_data.o: include/request_data.cpp.o
+
+.PHONY : include/request_data.o
+
+# target to build an object file
+include/request_data.cpp.o:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/request_data.cpp.o
+.PHONY : include/request_data.cpp.o
+
+include/request_data.i: include/request_data.cpp.i
+
+.PHONY : include/request_data.i
+
+# target to preprocess a source file
+include/request_data.cpp.i:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/request_data.cpp.i
+.PHONY : include/request_data.cpp.i
+
+include/request_data.s: include/request_data.cpp.s
+
+.PHONY : include/request_data.s
+
+# target to generate assembly for a file
+include/request_data.cpp.s:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/request_data.cpp.s
+.PHONY : include/request_data.cpp.s
+
+include/socket_tool.o: include/socket_tool.cpp.o
+
+.PHONY : include/socket_tool.o
+
+# target to build an object file
+include/socket_tool.cpp.o:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/socket_tool.cpp.o
+.PHONY : include/socket_tool.cpp.o
+
+include/socket_tool.i: include/socket_tool.cpp.i
+
+.PHONY : include/socket_tool.i
+
+# target to preprocess a source file
+include/socket_tool.cpp.i:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/socket_tool.cpp.i
+.PHONY : include/socket_tool.cpp.i
+
+include/socket_tool.s: include/socket_tool.cpp.s
+
+.PHONY : include/socket_tool.s
+
+# target to generate assembly for a file
+include/socket_tool.cpp.s:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/socket_tool.cpp.s
+.PHONY : include/socket_tool.cpp.s
 
 include/thread_pool.o: include/thread_pool.cpp.o
 
@@ -204,59 +298,32 @@ include/util.cpp.s:
 	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/util.cpp.s
 .PHONY : include/util.cpp.s
 
-include/wrap.o: include/wrap.cpp.o
+src/server_simple.o: src/server_simple.cpp.o
 
-.PHONY : include/wrap.o
-
-# target to build an object file
-include/wrap.cpp.o:
-	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.o
-.PHONY : include/wrap.cpp.o
-
-include/wrap.i: include/wrap.cpp.i
-
-.PHONY : include/wrap.i
-
-# target to preprocess a source file
-include/wrap.cpp.i:
-	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.i
-.PHONY : include/wrap.cpp.i
-
-include/wrap.s: include/wrap.cpp.s
-
-.PHONY : include/wrap.s
-
-# target to generate assembly for a file
-include/wrap.cpp.s:
-	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/include/wrap.cpp.s
-.PHONY : include/wrap.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
+.PHONY : src/server_simple.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/server_simple.cpp.o:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/src/server_simple.cpp.o
+.PHONY : src/server_simple.cpp.o
 
-main.i: main.cpp.i
+src/server_simple.i: src/server_simple.cpp.i
 
-.PHONY : main.i
+.PHONY : src/server_simple.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/server_simple.cpp.i:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/src/server_simple.cpp.i
+.PHONY : src/server_simple.cpp.i
 
-main.s: main.cpp.s
+src/server_simple.s: src/server_simple.cpp.s
 
-.PHONY : main.s
+.PHONY : src/server_simple.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/server_simple.cpp.s:
+	$(MAKE) -f CMakeFiles/High_Performance_Server.dir/build.make CMakeFiles/High_Performance_Server.dir/src/server_simple.cpp.s
+.PHONY : src/server_simple.cpp.s
 
 # Help Target
 help:
@@ -266,22 +333,29 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... Client"
 	@echo "... High_Performance_Server"
+	@echo "... client/client.o"
+	@echo "... client/client.i"
+	@echo "... client/client.s"
 	@echo "... include/epoll_tool.o"
 	@echo "... include/epoll_tool.i"
 	@echo "... include/epoll_tool.s"
+	@echo "... include/request_data.o"
+	@echo "... include/request_data.i"
+	@echo "... include/request_data.s"
+	@echo "... include/socket_tool.o"
+	@echo "... include/socket_tool.i"
+	@echo "... include/socket_tool.s"
 	@echo "... include/thread_pool.o"
 	@echo "... include/thread_pool.i"
 	@echo "... include/thread_pool.s"
 	@echo "... include/util.o"
 	@echo "... include/util.i"
 	@echo "... include/util.s"
-	@echo "... include/wrap.o"
-	@echo "... include/wrap.i"
-	@echo "... include/wrap.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/server_simple.o"
+	@echo "... src/server_simple.i"
+	@echo "... src/server_simple.s"
 .PHONY : help
 
 

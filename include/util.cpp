@@ -4,9 +4,12 @@
 
 
 #include <cerrno>
-#include "util.h"
-
-int set_socket_unblock(int fd);
+#include <iostream>
+#include <cstdlib>
+#include <cstdio>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/socket.h>
 
 int set_socket_unblocking(int fd) {
     int flag = fcntl(fd, F_GETFL);
@@ -16,6 +19,24 @@ int set_socket_unblocking(int fd) {
     flag |= O_NONBLOCK;
     if (fcntl(fd, F_SETFL, flag) == -1) {
         return -1;
+    }
+}
+
+void err_die(const char* sc){
+    perror(sc);
+    exit(1);
+}
+
+/********************
+ * @param client    the client sock descriptor
+ * @param resource  pointer for the file to cat
+ */
+void cat(int client, FILE* resource){
+    char buf[1024];
+    fgets(buf, sizeof(buf), resource);
+    while(!feof(resource)){
+        send(client, buf, sizeof(buf), 0);
+        fgets(buf, sizeof(buf), resource);
     }
 }
 
@@ -48,9 +69,10 @@ ssize_t Write(int fd, const void *ptr, unsigned long nbytes) {
 
 int Close(int fd) {
     int n;
-    if ((n = close(fd)) == -1)
-        perror_exit("close error");
-
+    if ((n = close(fd)) == -1) {
+        perror("close error");
+        exit(-1);
+    }
     return n;
 }
 
@@ -129,24 +151,25 @@ ssize_t my_read(int fd, char *ptr) {
     return 1;
 }
 
-//传出参数 vptr
-ssize_t Readline(int fd, void *vptr, unsigned long maxlen) {
-    ssize_t n, rc;
-    char c, *ptr;
-    ptr = (char *) vptr;
-
-    for (n = 1; n < maxlen; n++) {
-        if ((rc = my_read(fd, &c)) == 1) {   //ptr[] = hello\n
-            *ptr++ = c;
-            if (c == '\n')
-                break;
-        } else if (rc == 0) {
-            *ptr = 0;
-            return n - 1;
-        } else
-            return -1;
+size_t get_line(int sock, char *buf, size_t size) {
+    char c = '\0';
+    int n = 0;
+    size_t i = 0;
+    while (i < size - 1 && c != '\n') {
+        n = recv(sock, &c, 1, 0);
+        if (n > 0) {
+            if (c == '\r') {
+                n = recv(sock, &c, 1, MSG_PEEK);
+                if (n > 0 && c == '\n') {
+                    recv(sock, &c, 1, 0);
+                } else {
+                    c = '\n';
+                }
+            }
+            buf[i++] = c;
+        }
+        c = '\n';
     }
-    *ptr = 0;
-
-    return n;
+    buf[i] = '\0';
+    return i;
 }

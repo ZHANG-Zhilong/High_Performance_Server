@@ -6,8 +6,9 @@
 #include <sys/epoll.h>
 #include <fcntl.h>
 #include <chrono>
-#include "./include/socket_tool.h"
-#include "./include/epoll_tool.h"
+#include "socket_tool.h"
+#include "epoll_tool.h"
+#include "util.h"
 
 #define SERVER_PORT 8899
 #define OPEN_MAX 5000
@@ -27,7 +28,7 @@ void process_command_line(int argc, char* argv[]);
 #pragma ide diagnostic ignored "EndlessLoop"
 
 //this is main
-int play_ground(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
 
 #ifdef DEBUG
     cout<<"DEBUG"<<endl;

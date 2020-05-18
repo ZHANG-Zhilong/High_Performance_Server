@@ -5,15 +5,21 @@
       <w>epfd</w>
       <w>epoll</w>
       <w>epollin</w>
+      <w>getsockname</w>
+      <w>htdocs</w>
       <w>htonl</w>
       <w>inaddr</w>
+      <w>namelen</w>
       <w>nonblocking</w>
+      <w>numchars</w>
       <w>perror</w>
       <w>readn</w>
       <w>readys</w>
       <w>retval</w>
       <w>serv</w>
+      <w>setsocketopt</w>
       <w>sockaddr</w>
+      <w>sspace</w>
       <w>threadpoll</w>
       <w>threadpool</w>
       <w>tids</w>

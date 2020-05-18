@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="192.168.3.25">
+  <component name="PublishConfigData" autoUpload="Always" serverName="192.168.3.27">
     <serverData>
-      <paths name="192.168.3.25">
+      <paths name="192.168.3.27">
         <serverdata>
           <mappings>
             <mapping deploy="/home/zhilong/High_Performance_Server-master" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="CentOS7_64_1 (97802392-51c8-4759-a562-a6d894e80126)">
+      <paths name="Remote Host (546b18ec-541b-4bd9-828e-fc5a7e6a110d)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/tmp.pYDmku85Kq" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/tmp.sgZYOaCSKT" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
