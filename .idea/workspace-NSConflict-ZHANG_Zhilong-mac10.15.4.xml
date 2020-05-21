@@ -16,15 +16,12 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="High_Performance_Server" targetName="Client" />
+    </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
@@ -32,40 +29,80 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65ea18a1-24eb-4eea-87aa-573423f99119" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeRCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/includes_CXX.rsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/linklibs.rsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/objects1.rsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/includes_CXX.rsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/linklibs.rsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/._dictionaries" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/._httpRequests" beforeDir="false" />
+    <list default="true" id="65ea18a1-24eb-4eea-87aa-573423f99119" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace-Conflict-ZHANG_Zhilong_Win10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/client.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/CXX.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/CXX.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Server.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Server" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/client" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/request_data.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/request_data.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server_simple.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/zhangzhilong.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/zhangzhilong.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/4" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/5" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Server" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/client" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/client" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/epoll/include/wrap.cc" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/epoll/include/wrap.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/epoll/include/wrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/epoll/include/wrap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/epoll_nonblock_io/include/wrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/epoll_nonblock_io/include/wrap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/epoll_nonblock_io/wrap.cc" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/epoll_nonblock_io/wrap.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/multi_progress_server/include/wrap.cc" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/multi_progress_server/include/wrap.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/multi_progress_server/include/wrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/multi_progress_server/include/wrap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/multi_thread_server/include/wrap.cc" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/multi_thread_server/include/wrap.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/multi_thread_server/include/wrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/multi_thread_server/include/wrap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/epoll_unblock/High_Performance_Server" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/epoll_unblock/High_Performance_Server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/request_data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/request_data.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/socket_tool.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/socket_tool.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/socket_tool.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/socket_tool.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/util.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/util.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/util.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/util.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/server_epool.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +112,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -90,7 +128,9 @@
     <option name="configuration" value="0-Debug-High_Performance_Server" />
   </component>
   <component name="ProjectId" id="1bpmjQgYwaIV2wqxd0Ij1s6RAi6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="新增" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -99,8 +139,6 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -152,7 +190,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP 请求.All in get-requests">
+  <component name="RunManager" selected="CMake Application.High_Performance_Server">
+    <configuration name="Client" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="High_Performance_Server" TARGET_NAME="Client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="High_Performance_Server" RUN_TARGET_NAME="Client">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="High_Performance_Server" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="High_Performance_Server" RUN_TARGET_NAME="High_Performance_Server" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -171,11 +214,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="CMake Application.Client" />
       <item itemvalue="CMake Application.High_Performance_Server" />
       <item itemvalue="HTTP 请求.All in get-requests" />
-      <item itemvalue="HTTP 请求.All in rest-api" />
       <item itemvalue="HTTP 请求.rest-api#1" />
+      <item itemvalue="HTTP 请求.All in rest-api" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP 请求.All in rest-api" />
+        <item itemvalue="HTTP 请求.rest-api#1" />
+        <item itemvalue="HTTP 请求.All in get-requests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -196,19 +247,7 @@
       <workItem from="1589629936152" duration="723000" />
       <workItem from="1589630747831" duration="70000" />
       <workItem from="1589630966711" duration="18646000" />
-      <workItem from="1589792377732" duration="588000" />
-      <workItem from="1589793094418" duration="1478000" />
-      <workItem from="1589794598389" duration="2142000" />
-      <workItem from="1590035069439" duration="1980000" />
     </task>
-    <task id="LOCAL-00001" summary="默认的">
-      <created>1589795013445</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1589795013445</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,41 +267,28 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="默认的" />
-    <option name="LAST_COMMIT_MESSAGE" value="默认的" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="69" y="32" key="#Deployment" timestamp="1589794043070">
-      <screen x="62" y="0" width="1218" height="720" />
-    </state>
-    <state x="69" y="32" key="#Deployment/62.0.1218.720@62.0.1218.720" timestamp="1589794043070" />
     <state x="386" y="176" key="#High_Performance_Server" timestamp="1589631918425">
       <screen x="40" y="23" width="1304" height="817" />
     </state>
     <state x="386" y="176" key="#High_Performance_Server/40.23.1304.817@40.23.1304.817" timestamp="1589631918425" />
-    <state x="349" y="55" key="#Options" timestamp="1589793754122">
-      <screen x="62" y="0" width="1218" height="720" />
+    <state x="275" y="84" key="#SSH_Configurations" timestamp="1589630227521">
+      <screen x="40" y="23" width="1304" height="817" />
     </state>
-    <state x="349" y="55" key="#Options/62.0.1218.720@62.0.1218.720" timestamp="1589793754122" />
-    <state x="44" y="0" key="#SSH_Configurations" timestamp="1590037975659">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="44" y="0" key="#SSH_Configurations/0.0.1280.800@0.0.1280.800" timestamp="1590037975659" />
     <state x="272" y="84" key="#SSH_Configurations/37.23.1307.817@37.23.1307.817" timestamp="1589415006590" />
     <state x="273" y="84" key="#SSH_Configurations/38.23.1306.817@38.23.1306.817" timestamp="1589425892403" />
     <state x="275" y="84" key="#SSH_Configurations/40.23.1304.817@40.23.1304.817" timestamp="1589630227521" />
-    <state x="104" y="0" key="#SSH_Configurations/62.0.1218.720@62.0.1218.720" timestamp="1589794520973" />
     <state x="93" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589634645123">
       <screen x="40" y="23" width="1304" height="817" />
     </state>
     <state x="93" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog/40.23.1304.817@40.23.1304.817" timestamp="1589634645123" />
-    <state x="485" y="193" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589792936629">
-      <screen x="62" y="0" width="1218" height="720" />
+    <state x="493" y="242" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589549844238">
+      <screen x="40" y="23" width="1304" height="817" />
     </state>
     <state x="491" y="242" key="#com.intellij.fileTypes.FileTypeChooser/37.23.1307.817@37.23.1307.817" timestamp="1589370855021" />
     <state x="492" y="242" key="#com.intellij.fileTypes.FileTypeChooser/38.23.1306.817@38.23.1306.817" timestamp="1589469325277" />
     <state x="493" y="242" key="#com.intellij.fileTypes.FileTypeChooser/40.23.1304.817@40.23.1304.817" timestamp="1589549844238" />
-    <state x="485" y="193" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1218.720@62.0.1218.720" timestamp="1589792936629" />
     <state x="474" y="147" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1589630114976">
       <screen x="40" y="23" width="1304" height="817" />
     </state>
@@ -300,21 +326,16 @@
       <screen x="37" y="23" width="1307" height="817" />
     </state>
     <state x="45" y="31" width="1291" height="801" maximized="true" key="DiffContextDialog/37.23.1307.817@37.23.1307.817" timestamp="1589386760662" />
-    <state x="138" y="50" width="1032" height="544" key="DirDiffDialog" timestamp="1589794165631">
-      <screen x="62" y="0" width="1218" height="720" />
+    <state x="119" y="80" width="1106" height="617" key="DirDiffDialog" timestamp="1589427218086">
+      <screen x="38" y="23" width="1306" height="817" />
     </state>
     <state x="118" y="80" width="1107" height="617" key="DirDiffDialog/37.23.1307.817@37.23.1307.817" timestamp="1589377238464" />
     <state x="119" y="80" width="1106" height="617" key="DirDiffDialog/38.23.1306.817@38.23.1306.817" timestamp="1589427218086" />
     <state x="121" y="80" width="1104" height="617" key="DirDiffDialog/40.23.1304.817@40.23.1304.817" timestamp="1589338084025" />
-    <state x="138" y="50" width="1032" height="544" key="DirDiffDialog/62.0.1218.720@62.0.1218.720" timestamp="1589794165631" />
     <state x="568" y="144" width="554" height="535" key="EnvironmentVariablesDialog" timestamp="1589629756578">
       <screen x="40" y="23" width="1304" height="817" />
     </state>
     <state x="568" y="144" width="554" height="535" key="EnvironmentVariablesDialog/40.23.1304.817@40.23.1304.817" timestamp="1589629756578" />
-    <state x="396" y="122" key="FileChooserDialogImpl" timestamp="1589794478194">
-      <screen x="62" y="0" width="1218" height="720" />
-    </state>
-    <state x="396" y="122" key="FileChooserDialogImpl/62.0.1218.720@62.0.1218.720" timestamp="1589794478194" />
     <state width="1262" height="179" key="GridCell.Tab.0.bottom" timestamp="1589762861353">
       <screen x="37" y="23" width="1307" height="817" />
     </state>
@@ -363,14 +384,12 @@
     <state width="1262" height="228" key="GridCell.Tab.1.right/37.23.1307.817@37.23.1307.817" timestamp="1589386182116" />
     <state width="1262" height="257" key="GridCell.Tab.1.right/38.23.1306.817@38.23.1306.817" timestamp="1589444314905" />
     <state width="1252" height="259" key="GridCell.Tab.1.right/40.23.1304.817@40.23.1304.817" timestamp="1589626469121" />
-    <state x="0" y="14" width="1076" height="707" key="SettingsEditor" timestamp="1590037978808">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="102" y="51" width="1151" height="722" key="SettingsEditor" timestamp="1589631027051">
+      <screen x="40" y="23" width="1304" height="817" />
     </state>
-    <state x="0" y="14" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1590037978808" />
     <state x="190" y="70" key="SettingsEditor/37.23.1307.817@37.23.1307.817" timestamp="1589415609863" />
     <state x="191" y="70" key="SettingsEditor/38.23.1306.817@38.23.1306.817" timestamp="1589426034076" />
     <state x="102" y="51" width="1151" height="722" key="SettingsEditor/40.23.1304.817@40.23.1304.817" timestamp="1589631027051" />
-    <state x="-25" y="13" width="1076" height="707" key="SettingsEditor/62.0.1218.720@62.0.1218.720" timestamp="1589794661825" />
     <state x="480" y="354" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589436939784">
       <screen x="38" y="23" width="1306" height="817" />
     </state>
@@ -379,20 +398,15 @@
       <screen x="38" y="23" width="1306" height="817" />
     </state>
     <state x="235" y="169" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/38.23.1306.817@38.23.1306.817" timestamp="1589443571531" />
-    <state x="568" y="130" width="381" height="538" key="ftp.server.browser" timestamp="1589792749895">
-      <screen x="62" y="0" width="1218" height="720" />
+    <state x="582" y="171" key="ftp.server.browser" timestamp="1589553877685">
+      <screen x="40" y="23" width="1304" height="817" />
     </state>
     <state x="581" y="171" key="ftp.server.browser/38.23.1306.817@38.23.1306.817" timestamp="1589425971632" />
     <state x="582" y="171" key="ftp.server.browser/40.23.1304.817@40.23.1304.817" timestamp="1589553877685" />
-    <state x="568" y="130" width="381" height="538" key="ftp.server.browser/62.0.1218.720@62.0.1218.720" timestamp="1589792749895" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1589363828358">
       <screen x="38" y="23" width="1306" height="817" />
     </state>
     <state width="600" height="440" key="javadoc.popup/38.23.1306.817@38.23.1306.817" timestamp="1589363828358" />
-    <state x="524" y="303" key="publish.login" timestamp="1590036264370">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="524" y="303" key="publish.login/0.0.1280.800@0.0.1280.800" timestamp="1590036264370" />
     <state x="176" y="216" width="800" height="399" key="refactoring.ChangeSignatureDialog" timestamp="1589634953498">
       <screen x="40" y="23" width="1304" height="817" />
     </state>
