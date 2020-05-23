@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/tmp/tmp.E84AFvgGFd/client/client.cpp
+cstdio
+-
+cstdlib
+-
+string
+-
+arpa/inet.h
+-
+sys/socket.h
+-
+unistd.h
+-
+

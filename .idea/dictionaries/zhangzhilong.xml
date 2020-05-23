@@ -1,18 +1,32 @@
 <component name="ProjectDictionaryState">
   <dictionary name="zhangzhilong">
     <words>
+      <w>bgcolor</w>
       <w>clie</w>
       <w>epfd</w>
       <w>epoll</w>
+      <w>epollfd</w>
       <w>epollin</w>
+      <w>epoolfd</w>
+      <w>ffffff</w>
+      <w>filetype</w>
       <w>getsockname</w>
       <w>htdocs</w>
       <w>htonl</w>
       <w>inaddr</w>
+      <w>keed</w>
+      <w>listenq</w>
+      <w>maxevents</w>
+      <w>msvideo</w>
+      <w>msword</w>
+      <w>mtimer</w>
+      <w>mytimer</w>
       <w>namelen</w>
       <w>nonblocking</w>
       <w>numchars</w>
       <w>perror</w>
+      <w>pversion</w>
+      <w>qlock</w>
       <w>readn</w>
       <w>readys</w>
       <w>retval</w>
@@ -23,6 +37,7 @@
       <w>threadpoll</w>
       <w>threadpool</w>
       <w>tids</w>
+      <w>zhang</w>
     </words>
   </dictionary>
 </component>

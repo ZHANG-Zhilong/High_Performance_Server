@@ -7,17 +7,15 @@ include_directories(include)
 
 add_executable(
         High_Performance_Server
-        src/server_simple.cpp
-        include/thread_pool.cpp
-        include/thread_pool.h
-        include/socket_tool.cpp
-        include/socket_tool.h
-        include/epoll_tool.cpp
-        include/epoll_tool.h
-        include/util.cpp
-        include/util.h
-        include/request_data.cpp
-        include/request_data.h
+        server_simple.cpp
+        include/this_epoll.h
+        include/this_epoll.cpp
+        ./include/requestData.h
+        ./include/requestData.cpp
+        ./include/threadpool.h
+        ./include/threadpool.cpp
+        include/this_util.h
+        include/this_util.cpp
 )
 
 add_executable(
