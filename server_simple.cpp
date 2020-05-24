@@ -162,13 +162,8 @@ void handle_expired_event() {
 #pragma ide diagnostic ignored "EndlessLoop"
 
 int main() {
-    struct stat data{};
-    stat("/", &data);
-    int fds = open("index", O_CREAT,O_RDWR);
-    char buf [1024];
-    getcwd(buf, sizeof(buf));
 
-    handle_for_sigpipe();
+    //handle_for_sigpipe();
     int epoll_fd = epoll_init();
     if (epoll_fd < 0) {
         perror("epoll init failed");

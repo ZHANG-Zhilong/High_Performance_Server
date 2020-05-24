@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/server.dir/src/main.cpp.o CMakeFiles/server.dir/include/thread_pool.cpp.o CMakeFiles/server.dir/include/socket_tool.cpp.o CMakeFiles/server.dir/include/epoll_tool.cpp.o CMakeFiles/server.dir/include/util.cpp.o CMakeFiles/server.dir/client/client.cpp.o  -o server 

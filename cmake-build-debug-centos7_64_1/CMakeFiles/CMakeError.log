@@ -1,0 +1,59 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_ae1dd/fast && /usr/bin/gmake -f CMakeFiles/cmTC_ae1dd.dir/build.make CMakeFiles/cmTC_ae1dd.dir/build
+gmake[1]: 进入目录“/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_ae1dd.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ae1dd.dir/src.c.o   -c /tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ae1dd
+/usr/local/clion-2020.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae1dd.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_ae1dd.dir/src.c.o  -o cmTC_ae1dd 
+CMakeFiles/cmTC_ae1dd.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x2d)：对‘pthread_create’未定义的引用
+src.c:(.text+0x39)：对‘pthread_detach’未定义的引用
+src.c:(.text+0x4a)：对‘pthread_join’未定义的引用
+src.c:(.text+0x5e)：对‘pthread_atfork’未定义的引用
+collect2: 错误：ld 返回 1
+gmake[1]: *** [cmTC_ae1dd] 错误 1
+gmake[1]: 离开目录“/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_ae1dd/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_3ee87/fast && /usr/bin/gmake -f CMakeFiles/cmTC_3ee87.dir/build.make CMakeFiles/cmTC_3ee87.dir/build
+gmake[1]: 进入目录“/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_3ee87.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3ee87.dir/CheckFunctionExists.c.o   -c /usr/local/clion-2020.1.1/bin/cmake/linux/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3ee87
+/usr/local/clion-2020.1.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ee87.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3ee87.dir/CheckFunctionExists.c.o  -o cmTC_3ee87  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: 错误：ld 返回 1
+gmake[1]: *** [cmTC_3ee87] 错误 1
+gmake[1]: 离开目录“/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/CMakeFiles/CMakeTmp”
+gmake: *** [cmTC_3ee87/fast] 错误 2
+
+
+

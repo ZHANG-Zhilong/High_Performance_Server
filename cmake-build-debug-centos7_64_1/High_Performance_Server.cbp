@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="High_Performance_Server"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Client">
+				<Option output="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/tmp/tmp.8eTFzkcEu3/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 Client"/>
+					<CompileFile command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Client/fast">
+				<Option output="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/tmp/tmp.8eTFzkcEu3/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 Client/fast"/>
+					<CompileFile command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="High_Performance_Server">
+				<Option output="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/High_Performance_Server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/tmp/tmp.8eTFzkcEu3/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 High_Performance_Server"/>
+					<CompileFile command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="High_Performance_Server/fast">
+				<Option output="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/High_Performance_Server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/tmp/tmp.8eTFzkcEu3/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 High_Performance_Server/fast"/>
+					<CompileFile command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j3 -f &quot;/tmp/tmp.8eTFzkcEu3/cmake-build-debug-centos7_64_1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/client/client.cpp">
+			<Option target="Client"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/include/requestData.cpp">
+			<Option target="High_Performance_Server"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/include/requestData.h">
+			<Option target="High_Performance_Server"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/include/this_epoll.cpp">
+			<Option target="High_Performance_Server"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/include/this_epoll.h">
+			<Option target="High_Performance_Server"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/include/this_util.cpp">
+			<Option target="High_Performance_Server"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/include/this_util.h">
+			<Option target="High_Performance_Server"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/include/threadpool.cpp">
+			<Option target="High_Performance_Server"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/include/threadpool.h">
+			<Option target="High_Performance_Server"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/server_simple.cpp">
+			<Option target="High_Performance_Server"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.8eTFzkcEu3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

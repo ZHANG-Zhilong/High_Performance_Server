@@ -24,6 +24,7 @@
       <w>namelen</w>
       <w>nonblocking</w>
       <w>numchars</w>
+      <w>pcond</w>
       <w>perror</w>
       <w>pversion</w>
       <w>qlock</w>
