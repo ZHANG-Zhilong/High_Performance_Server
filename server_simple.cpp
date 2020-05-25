@@ -104,8 +104,11 @@ void acceptConnection(int listen_fd, int epoll_fd, const string &path) {
 }
 
 // 分发处理函数
+//void handle_events(int epoll_fd, int listen_fd, struct epoll_event *events,
+//                   int events_num, const string &path, threadpool_t *tp) {
+
 void handle_events(int epoll_fd, int listen_fd, struct epoll_event *events,
-                   int events_num, const string &path, threadpool_t *tp) {
+                   int events_num, const string &path, ThreadPool &pool) {
     for (int i = 0; i < events_num; i++) {
         // 获取有事件产生的描述符
         auto *request = (requestData *) (events[i].data.ptr);
@@ -126,7 +129,8 @@ void handle_events(int epoll_fd, int listen_fd, struct epoll_event *events,
             // 将请求任务加入到线程池中
             // 加入线程池之前将Timer和request分离
             request->separateTimer();
-            int rc = threadpool_add(tp, myHandler, events[i].data.ptr, 0);
+            //int rc = threadpool_add(tp, myHandler, events[i].data.ptr, 0);
+            pool.add(myHandler, events[i].data.ptr, 0);
         }
     }
 }
@@ -169,8 +173,11 @@ int main() {
         perror("epoll init failed");
         return 1;
     }
-    threadpool_t *threadpool =
-            threadpool_create(THREADPOOL_THREAD_NUM, QUEUE_SIZE, 0);
+    //threadpool_t *threadpool =
+    //       threadpool_create(THREADPOOL_THREAD_NUM, QUEUE_SIZE, 0);
+
+    ThreadPool threadpool;
+    threadpool.create(THREADPOOL_THREAD_NUM, QUEUE_SIZE, 0);
     int listen_fd = socket_bind_listen(PORT);
     if (listen_fd < 0) {
         perror("socket bind failed");
