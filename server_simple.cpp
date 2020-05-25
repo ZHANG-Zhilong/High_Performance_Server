@@ -6,6 +6,7 @@
 #include <sys/time.h>
 #include <unistd.h>
 #include <sys/stat.h>
+#include <signal.h>
 #include <dirent.h>
 #include <fcntl.h>
 #include <iostream>
@@ -166,8 +167,8 @@ void handle_expired_event() {
 #pragma ide diagnostic ignored "EndlessLoop"
 
 int main() {
-
-    //handle_for_sigpipe();
+    signal(SIGPIPE, SIG_IGN);
+    handle_for_sigpipe();
     int epoll_fd = epoll_init();
     if (epoll_fd < 0) {
         perror("epoll init failed");

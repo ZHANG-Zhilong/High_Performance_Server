@@ -254,7 +254,7 @@ int ThreadPool::add(void(*function)(void *), void(*argument), int flag = 0) {
         if (this->status == SHUTDOWN) {
             break;
         }
-        size_t next = (this->queue_rear + 1) % this->queue_size;
+        size_t next = (this->queue_rear + 1) % this->queue_size;  //rear指向下一个位置，而下一个位置还没有任务
         this->queue[this->queue_rear].function = function;
         this->queue[this->queue_rear].argument = argument;
         this->queue_rear = next;

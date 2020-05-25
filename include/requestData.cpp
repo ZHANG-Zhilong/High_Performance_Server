@@ -45,26 +45,7 @@ void MimeType::init() {
 }
 
 std::string MimeType::getMime(const std::string &suffix) {
-    if (mime.empty()) {
-        pthread_mutex_lock(&lock);
-        if (mime.size() == 0) {
-            mime[".html"] = "text/html";
-            mime[".avi"] = "video/x-msvideo";
-            mime[".bmp"] = "image/bmp";
-            mime[".c"] = "text/plain";
-            mime[".doc"] = "application/msword";
-            mime[".gif"] = "image/gif";
-            mime[".gz"] = "application/x-gzip";
-            mime[".htm"] = "text/html";
-            mime[".ico"] = "application/x-ico";
-            mime[".jpg"] = "image/jpeg";
-            mime[".png"] = "image/png";
-            mime[".txt"] = "text/plain";
-            mime[".mp3"] = "audio/mp3";
-            mime["default"] = "text/html";
-        }
-        pthread_mutex_unlock(&lock);
-    }
+    pthread_once(&ponce_, MimeType::init);
     if (mime.find(suffix) == mime.end())
         return mime["default"];
     else
@@ -474,42 +455,21 @@ int requestData::analysisRequest() {
 }
 
 void requestData::handleError(int client, int err_num, string short_msg) {
-//    short_msg = " " + short_msg;
-//    char send_buff[MAX_BUFF];
-//    string body_buff, header_buff;
-//    body_buff += "<html><title>TKeed Error</title>";
-//    body_buff += "<body bgcolor=\"ffffff\">";
-//    body_buff += to_string(err_num) + short_msg;
-//    body_buff += "<hr><em> LinYa's Web Server</em>\n</body></html>";
-//
-//    header_buff += "HTTP/1.1 " + to_string(err_num) + short_msg + "\r\n";
-//    header_buff += "Content-type: text/html\r\n";
-//    header_buff += "Connection: close\r\n";
-//    header_buff += "Content-length: " + to_string(body_buff.size()) + "\r\n";
-//    header_buff += "\r\n";
-//    sprintf(send_buff, "%s", header_buff.c_str());
-//    writen(client, send_buff, strlen(send_buff));
-//    sprintf(send_buff, "%s", body_buff.c_str());
-//    writen(client, send_buff, strlen(send_buff));
-    char buf[2014];
-    sprintf(buf, "HTTP/1.0 404 NOT FOUND\r\n");
-    send(client, buf, strlen(buf), 0);
-    sprintf(buf, "server name");
-    send(client, buf, strlen(buf), 0);
-    sprintf(buf, "Content-Type: text/html\r\n");
-    send(client, buf, strlen(buf), 0);
-    sprintf(buf, "\r\n");
-    send(client, buf, strlen(buf), 0);
-    sprintf(buf, "<HTML><TITLE>Not Found</TITLE>\r\n");
-    send(client, buf, strlen(buf), 0);
-    sprintf(buf, "<BODY><P>The server could not fulfill\r\n");
-    send(client, buf, strlen(buf), 0);
-    sprintf(buf, "your request because the resource specified\r\n");
-    send(client, buf, strlen(buf), 0);
-    sprintf(buf, "is unavailable or nonexistent.\r\n");
-    send(client, buf, strlen(buf), 0);
-    sprintf(buf, "</BODY></HTML>\r\n");
-    send(client, buf, strlen(buf), 0);
+    short_msg = " " + short_msg;
+    char send_buff[MAX_BUFF];
+    string body_buff, header_buff;
+    body_buff += "<html><title>TKeed Error</title>";
+    body_buff += "<body bgcolor=\"ffffff\">";
+    body_buff += to_string(err_num) + short_msg;
+    body_buff += "<hr><em> zhilong's Web Server</em>\n</body></html>";
+
+    header_buff += "HTTP/1.1 " + to_string(err_num) + short_msg + "\r\n";
+    header_buff += "Content-type: text/html\r\n";
+    header_buff += "Connection: close\r\n";
+    header_buff += "Content-length: " + to_string(body_buff.size()) + "\r\n";
+    header_buff += "\r\n";
+    sprintf(send_buff, "%s", header_buff.c_str());
+    writen(client, send_buff, strlen(send_buff));
 }
 
 mytimer::mytimer(requestData *_request_data, int timeout)
