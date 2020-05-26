@@ -19,11 +19,17 @@
 #include <iostream>
 #include <utility>
 
-using namespace std;
-
+enum HeadersState {
+    h_start = 0,
+    h_key, h_colon, h_spaces_after_colon, h_value,
+    h_CR, h_LF, h_end_CR, h_end_LF
+};
+enum METHOD {
+    NOT_DEFINED = 0,
+    GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH
+};
 pthread_mutex_t qlock = PTHREAD_MUTEX_INITIALIZER;
-priority_queue<mytimer *, deque<mytimer *>, timerCmp> myTimerQueue;
-pthread_mutex_t MimeType::lock = PTHREAD_MUTEX_INITIALIZER;
+std::priority_queue<timer_stamp *, std::deque<timer_stamp *>, timerCmp> myTimerQueue;
 pthread_once_t MimeType::ponce_ = PTHREAD_ONCE_INIT;
 std::unordered_map<std::string, std::string> MimeType::mime;
 
@@ -54,28 +60,17 @@ std::string MimeType::getMime(const std::string &suffix) {
 
 
 requestData::requestData()
-        : now_read_pos(0),
-          state(STATE_PARSE_URI),
-          h_state(h_start),
-          keep_alive(false),
-          againTimes(0),
-          timer(nullptr) {
-    cout << "requestData constructed !" << endl;
+        : now_read_pos(0), state(STATE_PARSE_URI), h_state(h_start),
+          keep_alive(false), readTimes(0), timer(nullptr), method(NOT_DEFINED) {
 }
 
 requestData::requestData(int _epollfd, int _fd, std::string _path)
-        : now_read_pos(0),
-          state(STATE_PARSE_URI),
-          h_state(h_start),
-          keep_alive(false),
-          againTimes(0),
-          timer(nullptr),
-          path(std::move(_path)),
-          fd(_fd),
-          epollfd(_epollfd) {}
+        : now_read_pos(0), state(STATE_PARSE_URI), h_state(h_start),
+          method(NOT_DEFINED), keep_alive(false), readTimes(0),
+          timer(nullptr), path(std::move(_path)), fd(_fd), epollfd(_epollfd) {
+}
 
 requestData::~requestData() {
-    cout << "~requestData()" << endl;
     struct epoll_event ev{};
     // 超时的一定都是读请求，没有"被动"写。
     ev.events = EPOLLIN | EPOLLET | EPOLLONESHOT;
@@ -88,7 +83,7 @@ requestData::~requestData() {
     close(fd);
 }
 
-void requestData::addTimer(mytimer *mtimer) {
+void requestData::addTimer(timer_stamp *mtimer) {
     if (timer == nullptr) timer = mtimer;
 }
 
@@ -97,7 +92,7 @@ int requestData::get_fd() const { return fd; }
 void requestData::set_fd(int fd) { this->fd = fd; }
 
 void requestData::reset() {
-    againTimes = 0;
+    readTimes = 0;
     content.clear();
     file_name.clear();
     path.clear();
@@ -112,28 +107,31 @@ void requestData::reset() {
 void requestData::handleRequest() {
     char buff[MAX_BUFF];
     bool is_error = false;
-    while (true) {
-        int read_num = readn(fd, buff, MAX_BUFF);
-        if (read_num < 0) {
-            perror("1");
+    do {
+        int char_nums = readn(fd, buff, MAX_BUFF);
+        if (char_nums < 0) {
+            std::cerr << "read_num err" << std::endl;
             is_error = true;
             break;
-        } else if (read_num == 0) {
-            perror("read_num == 0");
+        } else if (char_nums == 0) {
+            std::cerr << "read_num == 0 " << strerror(errno) << std::endl;
             if (errno == EAGAIN) {
-                if (againTimes > AGAIN_MAX_TIMES)
+                if (readTimes > MAX_READ_TIMES) {
                     is_error = true;
-                else
-                    ++againTimes;
-            } else if (errno != 0)
+                    break;
+                } else {
+                    readTimes++;
+                }
+            } else if (errno != 0) {
                 is_error = true;
+            }
             break;
         }
-        string now_read(buff, buff + read_num);
+        std::string now_read(buff, buff + char_nums);
         content += now_read;
 
         if (state == STATE_PARSE_URI) {
-            int flag = this->parse_URI();
+            int flag = this->parse_request_line();
             if (flag == PARSE_URI_AGAIN) {
                 break;
             } else if (flag == PARSE_URI_ERROR) {
@@ -143,7 +141,7 @@ void requestData::handleRequest() {
             }
         }
         if (state == STATE_PARSE_HEADERS) {
-            int flag = this->parse_Headers();
+            int flag = this->parse_request_head();
             if (flag == PARSE_HEADER_AGAIN) {
                 break;
             } else if (flag == PARSE_HEADER_ERROR) {
@@ -181,7 +179,7 @@ void requestData::handleRequest() {
                 break;
             }
         }
-    }
+    } while (false);
 
     if (is_error) {
         delete this;
@@ -190,7 +188,6 @@ void requestData::handleRequest() {
     // 加入epoll继续
     if (state == STATE_FINISH) {
         if (keep_alive) {
-            printf("ok\n");
             this->reset();
         } else {
             delete this;
@@ -202,7 +199,7 @@ void requestData::handleRequest() {
     // 最后超时被删，然后正在线程中进行的任务出错，double free错误。
     // 新增时间信息
     pthread_mutex_lock(&qlock);
-    auto *mtimer = new mytimer(this, 500);
+    auto *mtimer = new timer_stamp(this, 500);
     timer = mtimer;
     myTimerQueue.push(mtimer);
     pthread_mutex_unlock(&qlock);
@@ -216,73 +213,67 @@ void requestData::handleRequest() {
     }
 }
 
-int requestData::parse_URI() {
-    string &str = content;
-    // 读到完整的请求行再开始解析请求
-    int pos = str.find('\r', now_read_pos);
+int requestData::parse_request_line() {
+    int pos = 0;
+    //get request line
+    std::string &str = content;
+    pos = str.find('\r', now_read_pos);
     if (pos < 0) {
         return PARSE_URI_AGAIN;
     }
-    // 去掉请求行所占的空间，节省空间
-    string request_line = str.substr(0, pos);
-    if (str.size() > pos + 1)
+    std::string request_line = str.substr(0, pos);
+    if (str.size() > pos + 1) {  //remove request line
         str = str.substr(pos + 1);
-    else
+    } else {
         str.clear();
+    }
+
+
     // Method
-    pos = request_line.find("GET");
-    if (pos < 0) {
-        pos = request_line.find("POST");
-        if (pos < 0) {
-            return PARSE_URI_ERROR;
-        } else {
-            method = METHOD_POST;
-        }
-    } else {
-        method = METHOD_GET;
+    pos = request_line.find_first_of(' ');
+    std::string temp = request_line.substr(0, pos);
+    request_line = request_line.substr(pos + 1);
+    method = Method::getMethod(temp);
+    if (pos < 0 || method == -1) {
+        return PARSE_URI_ERROR;
     }
+
+    //url
+    pos = request_line.find_first_of(' ');
+    temp = request_line.substr(0, pos);
+    request_line = request_line.substr(pos + 1);
+    if (temp == "/") {
+        file_name = "index.html";
+    } else {
+        if (temp.find('/') == std::string::npos) {
+            return PARSE_URI_ERROR;
+        }
+        if (temp.find('?') != std::string::npos) {
+            file_name = temp.substr(0, temp.find('?'));
+        }
+    }
+
+    // http version
     pos = request_line.find('/', pos);
-    if (pos == std::string::npos) {
+    if (pos < 0 || request_line.size() - pos <= 3) {
         return PARSE_URI_ERROR;
     } else {
-        int pos2 = request_line.find(' ', pos);
-        if (pos2 == std::string::npos)
-            return PARSE_URI_ERROR;
-        else {
-            if (pos2 - pos > 1) {
-                file_name = request_line.substr(pos + 1, pos2 - pos - 1);
-                int pos3 = file_name.find('?');
-                if (pos3 >= 0) {
-                    file_name = file_name.substr(0, pos3);
-                }
-            } else
-                file_name = "index.html";
-        }
-        pos = pos2;
-    }
-    // HTTP 版本号
-    pos = request_line.find('/', pos);
-    if (pos < 0) {
-        return PARSE_URI_ERROR;
-    } else {
-        if (request_line.size() - pos <= 3) {
-            return PARSE_URI_ERROR;
+        std::string version = request_line.substr(pos + 1, 3);
+        if (version == "1.0") {
+            HTTPversion = HTTP_10;
+        } else if (version == "1.1") {
+            HTTPversion = HTTP_11;
         } else {
-            string ver = request_line.substr(pos + 1, 3);
-            if (ver == "1.0")
-                HTTPversion = HTTP_10;
-            else if (ver == "1.1")
-                HTTPversion = HTTP_11;
-            else
-                return PARSE_URI_ERROR;
+            return PARSE_URI_ERROR;
         }
     }
+
     state = STATE_PARSE_HEADERS;
     return PARSE_URI_SUCCESS;
 }
 
-int requestData::parse_Headers() {
-    string &str = content;
+int requestData::parse_request_head() {
+    std::string &str = content;
     int key_start = -1, key_end = -1;
     int value_start = -1, value_end = -1;
     int now_read_line_begin = 0;
@@ -330,8 +321,8 @@ int requestData::parse_Headers() {
             case h_CR: {
                 if (str[i] == '\n') {
                     h_state = h_LF;
-                    string key(str.begin() + key_start, str.begin() + key_end);
-                    string value(str.begin() + value_start, str.begin() + value_end);
+                    std::string key(str.begin() + key_start, str.begin() + key_end);
+                    std::string value(str.begin() + value_start, str.begin() + value_end);
                     headers[key] = value;
                     now_read_line_begin = i;
                 } else
@@ -403,8 +394,8 @@ int requestData::analysisRequest() {
             perror("Send content failed");
             return ANALYSIS_ERROR;
         }
-        cout << "content size ==" << content.size() << endl;
-        vector<char> data(content.begin(), content.end());
+        std::cout << "content size ==" << content.size() << std::endl;
+        std::vector<char> data(content.begin(), content.end());
         return ANALYSIS_SUCCESS;
     } else if (method == METHOD_GET) {
         char header[MAX_BUFF];
@@ -454,25 +445,25 @@ int requestData::analysisRequest() {
         return ANALYSIS_ERROR;
 }
 
-void requestData::handleError(int client, int err_num, string short_msg) {
+void requestData::handleError(int client, int err_num, std::string short_msg) {
     short_msg = " " + short_msg;
     char send_buff[MAX_BUFF];
-    string body_buff, header_buff;
+    std::string body_buff, header_buff;
     body_buff += "<html><title>TKeed Error</title>";
     body_buff += "<body bgcolor=\"ffffff\">";
-    body_buff += to_string(err_num) + short_msg;
+    body_buff += std::to_string(err_num) + short_msg;
     body_buff += "<hr><em> zhilong's Web Server</em>\n</body></html>";
 
-    header_buff += "HTTP/1.1 " + to_string(err_num) + short_msg + "\r\n";
+    header_buff += "HTTP/1.1 " + std::to_string(err_num) + short_msg + "\r\n";
     header_buff += "Content-type: text/html\r\n";
     header_buff += "Connection: close\r\n";
-    header_buff += "Content-length: " + to_string(body_buff.size()) + "\r\n";
+    header_buff += "Content-length: " + std::to_string(body_buff.size()) + "\r\n";
     header_buff += "\r\n";
     sprintf(send_buff, "%s", header_buff.c_str());
     writen(client, send_buff, strlen(send_buff));
 }
 
-mytimer::mytimer(requestData *_request_data, int timeout)
+timer_stamp::timer_stamp(requestData *_request_data, int timeout)
         : deleted(false), request_data(_request_data) {
     struct timeval now{};
     gettimeofday(&now, nullptr);
@@ -480,22 +471,21 @@ mytimer::mytimer(requestData *_request_data, int timeout)
     expired_time = ((now.tv_sec * 1000) + (now.tv_usec / 1000)) + timeout;
 }
 
-mytimer::~mytimer() {
-    cout << "~mytimer()" << endl;
+timer_stamp::~timer_stamp() {
     if (request_data != nullptr) {
-        cout << "request_data=" << request_data << endl;
+        std::cout << "request_data=" << request_data << std::endl;
         delete request_data;
         request_data = nullptr;
     }
 }
 
-void mytimer::update(int timeout) {
+void timer_stamp::update(int timeout) {
     struct timeval now{};
     gettimeofday(&now, nullptr);
     expired_time = ((now.tv_sec * 1000) + (now.tv_usec / 1000)) + timeout;
 }
 
-bool mytimer::isvalid() {
+bool timer_stamp::isvalid() {
     struct timeval now{};
     gettimeofday(&now, nullptr);
     size_t temp = ((now.tv_sec * 1000) + (now.tv_usec / 1000));
@@ -507,17 +497,34 @@ bool mytimer::isvalid() {
     }
 }
 
-void mytimer::clearReq() {
+void timer_stamp::clearReq() {
     request_data = nullptr;
     this->setDeleted();
 }
 
-void mytimer::setDeleted() { deleted = true; }
+void timer_stamp::setDeleted() { deleted = true; }
 
-bool mytimer::isDeleted() const { return deleted; }
+bool timer_stamp::isDeleted() const { return deleted; }
 
-size_t mytimer::getExpTime() const { return expired_time; }
+size_t timer_stamp::getExpTime() const { return expired_time; }
 
-bool timerCmp::operator()(const mytimer *a, const mytimer *b) const {
+bool timerCmp::operator()(const timer_stamp *a, const timer_stamp *b) const {
     return a->getExpTime() > b->getExpTime();
+}
+
+pthread_once_t Method::ponce_ = PTHREAD_ONCE_INIT;
+std::unordered_map<std::string, int> Method::method_code;
+
+int Method::getMethod(const std::string &method) {
+    pthread_once(&ponce_, Method::init);
+    if (method_code.find(method) != method_code.end()) {
+        return method_code[method];
+    } else {
+        return -1;
+    }
+}
+
+void Method::init() {
+    method_code["GET"] = METHOD_GET;
+    method_code["POST"] = METHOD_POST;
 }

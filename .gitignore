@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# debug dir
+cmake-build-debug-centos7_64_1
+cmake-build-debug

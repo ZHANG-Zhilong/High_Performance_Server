@@ -15,8 +15,7 @@ const int MAX_BUFF = 4096;
 // 有请求出现但是读不到数据,可能是Request Aborted,
 // 或者来自网络的数据没有达到等原因,
 // 对这样的请求尝试超过一定的次数就抛弃
-const int AGAIN_MAX_TIMES = 200;
-
+const int MAX_READ_TIMES = 200;
 const int PARSE_URI_AGAIN = -1;
 const int PARSE_URI_ERROR = -2;
 const int PARSE_URI_SUCCESS = 0;
@@ -37,71 +36,79 @@ const int EPOLL_WAIT_TIME = 500;
 
 class MimeType {
 private:
-    static pthread_mutex_t lock;
     static pthread_once_t ponce_;
     static std::unordered_map<std::string, std::string> mime;
 
     static void init();
 
-    MimeType();
+    MimeType() = default;
 
-    MimeType(const MimeType &m);
 
 public:
+    MimeType(const MimeType &m) = delete;
+
+    MimeType &operator=(const MimeType &) = delete;
+
     static std::string getMime(const std::string &suffix);
 };
 
+class Method {
+private:
+    static std::unordered_map<std::string, int> method_code;
+    static pthread_once_t ponce_;
 
-enum HeadersState {
-    h_start = 0,
-    h_key,
-    h_colon,
-    h_spaces_after_colon,
-    h_value,
-    h_CR,
-    h_LF,
-    h_end_CR,
-    h_end_LF
+    Method() = default;
+
+    static void init();
+
+public:
+    Method(const Method &) = delete;
+
+    Method &operator=(const Method &) = delete;
+
+    static int getMethod(const std::string &method);
 };
 
-struct mytimer;
+
+struct timer_stamp;
 struct requestData;
 
 struct requestData {
 private:
-    int againTimes;
-    std::string path;
-    int fd;
-    int epollfd;
+    int readTimes;
+    int fd{};
+    int epollfd{};
     // content的内容用完就清
+    std::string path;
     std::string content;
     std::string file_name;
-    int method{};
+    int method;
     int HTTPversion{};
     int now_read_pos;
     int state;
     int h_state;
-    bool is_finish;
+    bool is_finish{};
     bool keep_alive;
     std::unordered_map<std::string, std::string> headers;
-    mytimer *timer;
+    timer_stamp *timer;
 
 private:
-    int parse_URI();
+    int parse_request_line();
 
-    int parse_Headers();
+    int parse_request_head();
 
     int analysisRequest();
 
+
 public:
+
+    ~requestData();
 
     requestData();
 
     requestData(int _epollfd, int _fd, std::string _path);
 
-    ~requestData();
-
-    void addTimer(mytimer *mtimer);
+    void addTimer(timer_stamp *mtimer);
 
     void reset();
 
@@ -116,14 +123,14 @@ public:
     static void handleError(int client, int err_num, std::string short_msg);
 };
 
-struct mytimer {
+struct timer_stamp {
     bool deleted;
     size_t expired_time;
     requestData *request_data;
 
-    mytimer(requestData *_request_data, int timeout);
+    timer_stamp(requestData *_request_data, int timeout);
 
-    ~mytimer();
+    ~timer_stamp();
 
     void update(int timeout);
 
@@ -139,7 +146,7 @@ struct mytimer {
 };
 
 struct timerCmp {
-    bool operator()(const mytimer *a, const mytimer *b) const;
+    bool operator()(const timer_stamp *a, const timer_stamp *b) const;
 };
 
 #endif

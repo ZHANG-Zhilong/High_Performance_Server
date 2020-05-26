@@ -3,19 +3,19 @@ project(High_Performance_Server)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(include)
+include_directories(src)
 
 add_executable(
         High_Performance_Server
         server_simple.cpp
-        include/this_epoll.h
-        include/this_epoll.cpp
-        ./include/requestData.h
-        ./include/requestData.cpp
-        ./include/threadpool.h
-        ./include/threadpool.cpp
-        include/this_util.h
-        include/this_util.cpp
+        src/this_epoll.h
+        src/this_epoll.cpp
+        src/requestData.h
+        src/requestData.cpp
+        src/threadpool.h
+        src/threadpool.cpp
+        src/this_util.h
+        src/this_util.cpp
 )
 
 add_executable(

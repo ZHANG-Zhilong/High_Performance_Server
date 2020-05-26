@@ -23,7 +23,9 @@
       <w>mtimer</w>
       <w>mytimer</w>
       <w>namelen</w>
+      <w>nleft</w>
       <w>nonblocking</w>
+      <w>nread</w>
       <w>numchars</w>
       <w>pcond</w>
       <w>perror</w>

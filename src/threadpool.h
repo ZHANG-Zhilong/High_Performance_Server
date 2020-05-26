@@ -122,10 +122,8 @@ int threadpool_free(threadpool_t *pool);
 
 static void *threadpool_thread(void *threadpool);
 
-//----------
 
 
-[[noreturn]] static void *do_thread(void *);
 
 class ThreadPool {
 public:
@@ -153,6 +151,8 @@ public:
     int create(uint32_t thread_num, uint32_t queue_size, int flag);
 
     int add(void (*function)(void *), void *argument, int flag);
+
+    static void *do_thread(void *);
 };
 
 

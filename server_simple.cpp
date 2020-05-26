@@ -13,11 +13,12 @@
 #include <queue>
 #include <vector>
 
-#include "this_epoll.h"
-#include "this_util.h"
-#include "requestData.h"
-#include "threadpool.h"
+#include "src/this_epoll.h"
+#include "src/this_util.h"
+#include "src/requestData.h"
+#include "src/threadpool.h"
 
+#define PATH "/"
 using namespace std;
 
 const int THREADPOOL_THREAD_NUM = 4;
@@ -27,13 +28,10 @@ const int PORT = 8888;
 const int ASK_STATIC_FILE = 1;
 const int ASK_IMAGE_STITCH = 2;
 
-const string PATH = "/";
-
 const int TIMER_TIME_OUT = 500;
 
 extern pthread_mutex_t qlock;
-extern struct epoll_event *events;
-extern priority_queue<mytimer *, deque<mytimer *>, timerCmp> myTimerQueue;
+extern priority_queue<timer_stamp *, deque<timer_stamp *>, timerCmp> myTimerQueue;
 
 void acceptConnection(int listen_fd, int epoll_fd, const string &path);
 
@@ -80,23 +78,20 @@ void acceptConnection(int listen_fd, int epoll_fd, const string &path) {
     struct sockaddr_in client_addr{};
     memset(&client_addr, 0, sizeof(struct sockaddr_in));
     socklen_t client_addr_len = 0;
-    int accept_fd = 0;
-    while ((accept_fd = accept(listen_fd,
-                               (struct sockaddr *) &client_addr,
-                               &client_addr_len)) > 0) {
+    int accept_fd = accept(listen_fd, (struct sockaddr *) &client_addr, &client_addr_len);
 
-        int ret = setSocketNonBlocking(accept_fd);
-        if (ret < 0) {
+    if (accept_fd > 0) {
+
+        if (setSocketNonBlocking(accept_fd) < 0) {
             perror("Set non block failed!");
             return;
         }
 
         auto *req_info = new requestData(epoll_fd, accept_fd, path);
+        uint32_t epo_event = EPOLLIN | EPOLLET | EPOLLONESHOT;
+        epoll_add(epoll_fd, accept_fd, static_cast<void *>(req_info), epo_event);
 
-        uint32_t _epo_event = EPOLLIN | EPOLLET | EPOLLONESHOT;
-        epoll_add(epoll_fd, accept_fd, static_cast<void *>(req_info), _epo_event);
-        // 新增时间信息
-        auto *mtimer = new mytimer(req_info, TIMER_TIME_OUT);
+        auto *mtimer = new timer_stamp(req_info, TIMER_TIME_OUT);
         req_info->addTimer(mtimer);
         pthread_mutex_lock(&qlock);
         myTimerQueue.push(mtimer);
@@ -111,26 +106,22 @@ void acceptConnection(int listen_fd, int epoll_fd, const string &path) {
 void handle_events(int epoll_fd, int listen_fd, struct epoll_event *events,
                    int events_num, const string &path, ThreadPool &pool) {
     for (int i = 0; i < events_num; i++) {
-        // 获取有事件产生的描述符
+
         auto *request = (requestData *) (events[i].data.ptr);
         int fd = request->get_fd();
 
-        // 有事件发生的描述符为监听描述符
         if (fd == listen_fd) {
             acceptConnection(listen_fd, epoll_fd, path);
         } else {
-            // 排除错误事件
             if ((events[i].events & EPOLLERR) || (events[i].events & EPOLLHUP) ||
                 (!(events[i].events & EPOLLIN))) {
-                printf("error event\n");
+                cerr<<"error event in:"<<__func__<<endl;
                 delete request;
                 continue;
             }
 
-            // 将请求任务加入到线程池中
             // 加入线程池之前将Timer和request分离
             request->separateTimer();
-            //int rc = threadpool_add(tp, myHandler, events[i].data.ptr, 0);
             pool.add(myHandler, events[i].data.ptr, 0);
         }
     }
@@ -152,7 +143,7 @@ void handle_events(int epoll_fd, int listen_fd, struct epoll_event *events,
 void handle_expired_event() {
     pthread_mutex_lock(&qlock);
     while (!myTimerQueue.empty()) {
-        mytimer *timer_now_ptr = myTimerQueue.top();
+        timer_stamp *timer_now_ptr = myTimerQueue.top();
         if (timer_now_ptr->isDeleted() || !timer_now_ptr->isvalid()) {
             myTimerQueue.pop();
             delete timer_now_ptr;
@@ -167,31 +158,30 @@ void handle_expired_event() {
 #pragma ide diagnostic ignored "EndlessLoop"
 
 int main() {
-    signal(SIGPIPE, SIG_IGN);
-    handle_for_sigpipe();
+    //handle_for_sigpipe();
+    struct epoll_event *events;
     int epoll_fd = epoll_init();
     if (epoll_fd < 0) {
-        perror("epoll init failed");
-        return 1;
+        cerr << "epoll fd err in: " << __func__ << endl;
+        exit(-1);
     }
-    //threadpool_t *threadpool =
-    //       threadpool_create(THREADPOOL_THREAD_NUM, QUEUE_SIZE, 0);
 
     ThreadPool threadpool;
     threadpool.create(THREADPOOL_THREAD_NUM, QUEUE_SIZE, 0);
+
     int listen_fd = socket_bind_listen(PORT);
     if (listen_fd < 0) {
         perror("socket bind failed");
-        return 1;
+        exit(-1);
     }
     if (setSocketNonBlocking(listen_fd) < 0) {
         perror("set socket non block failed");
-        return 1;
+        exit(-1);
     }
-    uint32_t event = EPOLLIN | EPOLLET;
+    uint32_t listen_event = EPOLLIN | EPOLLET;
     auto *req = new requestData();
     req->set_fd(listen_fd);
-    epoll_add(epoll_fd, listen_fd, static_cast<void *>(req), event);
+    epoll_add(epoll_fd, listen_fd, static_cast<void *>(req), listen_event);
     while (true) {
         int events_num = my_epoll_wait(epoll_fd, events, MAXEVENTS, -1);
         if (events_num == 0) continue;

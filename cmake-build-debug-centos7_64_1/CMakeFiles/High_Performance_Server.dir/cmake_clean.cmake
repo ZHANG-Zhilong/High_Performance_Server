@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/High_Performance_Server.dir/include/requestData.cpp.o"
-  "CMakeFiles/High_Performance_Server.dir/include/this_epoll.cpp.o"
-  "CMakeFiles/High_Performance_Server.dir/include/this_util.cpp.o"
-  "CMakeFiles/High_Performance_Server.dir/include/threadpool.cpp.o"
   "CMakeFiles/High_Performance_Server.dir/server_simple.cpp.o"
+  "CMakeFiles/High_Performance_Server.dir/src/requestData.cpp.o"
+  "CMakeFiles/High_Performance_Server.dir/src/this_epoll.cpp.o"
+  "CMakeFiles/High_Performance_Server.dir/src/this_util.cpp.o"
+  "CMakeFiles/High_Performance_Server.dir/src/threadpool.cpp.o"
   "High_Performance_Server"
   "High_Performance_Server.pdb"
 )

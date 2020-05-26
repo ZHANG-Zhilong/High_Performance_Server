@@ -264,7 +264,7 @@ int ThreadPool::add(void(*function)(void *), void(*argument), int flag = 0) {
     return 0;
 }
 
-void *do_thread(void *arg) {
+void *ThreadPool::do_thread(void *arg) {
     auto *pool = (ThreadPool *) arg;
     threadpool_task_t task{};
     while (true) {
