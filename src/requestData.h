@@ -4,6 +4,7 @@
 #include <string>
 #include <unordered_map>
 
+
 const int STATE_PARSE_URI = 1;
 const int STATE_PARSE_HEADERS = 2;
 const int STATE_RECV_BODY = 3;
@@ -33,6 +34,11 @@ const int HTTP_10 = 1;
 const int HTTP_11 = 2;
 
 const int EPOLL_WAIT_TIME = 500;
+
+enum State{
+    parse_uri =1,
+    parse_headers, recv_body, analysis, finish
+};
 
 class MimeType {
 private:

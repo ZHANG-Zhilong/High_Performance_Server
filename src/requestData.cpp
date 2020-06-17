@@ -28,6 +28,7 @@ enum METHOD {
     NOT_DEFINED = 0,
     GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH
 };
+
 pthread_mutex_t qlock = PTHREAD_MUTEX_INITIALIZER;
 std::priority_queue<timer_stamp *, std::deque<timer_stamp *>, timerCmp> myTimerQueue;
 pthread_once_t MimeType::ponce_ = PTHREAD_ONCE_INIT;

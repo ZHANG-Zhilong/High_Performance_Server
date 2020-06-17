@@ -2,20 +2,13 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="192.168.3.25">
     <serverData>
-      <paths name="192.168.3.25">
+      <paths name="CentOS7_64_1 (0eb9ca6a-f734-4cc1-8eff-42eac684aa50)">
         <serverdata>
           <mappings>
-            <mapping deploy="High_Performance_Server-master" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="CentOS7_64_1 (e15be18a-42aa-4c75-922d-42f55a87a68b)">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/tmp/tmp.n3E448OXHI" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/tmp.S7gjalD22E" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-centos7_64_1" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
           </excludedPaths>
         </serverdata>
       </paths>

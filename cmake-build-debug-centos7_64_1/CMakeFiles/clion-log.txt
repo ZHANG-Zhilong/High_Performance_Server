@@ -1,4 +1,0 @@
-/usr/local/clion-2020.1.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /tmp/tmp.n3E448OXHI
--- Configuring done
--- Generating done
--- Build files have been written to: /tmp/tmp.n3E448OXHI/cmake-build-debug-centos7_64_1

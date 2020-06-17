@@ -526,7 +526,7 @@ void accept_request(void *arg) {
     char path[1024];
     size_t i, j;
     struct stat st{};
-    bool cgi = false;  //becomes true is server decides this is a cgi program.
+    bool cgi = false;  //becomes true is src decides this is a cgi program.
     char *query_string = nullptr;
     numchars = get_line(client, buf, sizeof(buf));
     i = 0;
@@ -644,7 +644,7 @@ void not_found(int client) {
     send(client, buf, strlen(buf), 0);
     sprintf(buf, "<HTML><TITLE>Not Found</TITLE>\r\n");
     send(client, buf, strlen(buf), 0);
-    sprintf(buf, "<BODY><P>The server could not fulfill\r\n");
+    sprintf(buf, "<BODY><P>The src could not fulfill\r\n");
     send(client, buf, strlen(buf), 0);
     sprintf(buf, "your request because the resource specified\r\n");
     send(client, buf, strlen(buf), 0);
