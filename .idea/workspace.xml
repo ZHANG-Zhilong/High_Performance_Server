@@ -26,34 +26,39 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Project" targetName="NightlyStart" />
-      <config projectName="Project" targetName="ContinuousTest" />
-      <config projectName="Project" targetName="NightlyMemoryCheck" />
-      <config projectName="Project" targetName="NightlyBuild" />
-      <config projectName="Project" targetName="ContinuousMemCheck" />
-      <config projectName="Project" targetName="ContinuousSubmit" />
-      <config projectName="Project" targetName="ContinuousCoverage" />
-      <config projectName="Project" targetName="NightlyTest" />
-      <config projectName="Project" targetName="NightlyMemCheck" />
-      <config projectName="Project" targetName="NightlyCoverage" />
-      <config projectName="Project" targetName="ContinuousUpdate" />
-      <config projectName="Project" targetName="ExperimentalMemCheck" />
-      <config projectName="Project" targetName="NightlyConfigure" />
-      <config projectName="Project" targetName="ContinuousStart" />
-      <config projectName="Project" targetName="ContinuousConfigure" />
-      <config projectName="Project" targetName="Continuous" />
-      <config projectName="Project" targetName="ExperimentalStart" />
-      <config projectName="Project" targetName="ExperimentalSubmit" />
-      <config projectName="Project" targetName="ContinuousBuild" />
-      <config projectName="Project" targetName="Experimental" />
-      <config projectName="Project" targetName="Nightly" />
-      <config projectName="Project" targetName="NightlySubmit" />
-      <config projectName="Project" targetName="ExperimentalCoverage" />
-      <config projectName="Project" targetName="ExperimentalConfigure" />
-      <config projectName="Project" targetName="ExperimentalBuild" />
-      <config projectName="Project" targetName="ExperimentalUpdate" />
-      <config projectName="Project" targetName="ExperimentalTest" />
-      <config projectName="Project" targetName="NightlyUpdate" />
+      <config projectName="High_Performance_Server" targetName="NightlyMemCheck" />
+      <config projectName="High_Performance_Server" targetName="NightlyCoverage" />
+      <config projectName="High_Performance_Server" targetName="ContinuousCoverage" />
+      <config projectName="High_Performance_Server" targetName="NightlyTest" />
+      <config projectName="High_Performance_Server" targetName="NightlySubmit" />
+      <config projectName="High_Performance_Server" targetName="ContinuousUpdate" />
+      <config projectName="High_Performance_Server" targetName="ExperimentalStart" />
+      <config projectName="High_Performance_Server" targetName="server_net" />
+      <config projectName="High_Performance_Server" targetName="ContinuousMemCheck" />
+      <config projectName="High_Performance_Server" targetName="server_base" />
+      <config projectName="High_Performance_Server" targetName="ExperimentalBuild" />
+      <config projectName="High_Performance_Server" targetName="NightlyUpdate" />
+      <config projectName="High_Performance_Server" targetName="NightlyConfigure" />
+      <config projectName="High_Performance_Server" targetName="ContinuousBuild" />
+      <config projectName="High_Performance_Server" targetName="t01" />
+      <config projectName="High_Performance_Server" targetName="ExperimentalSubmit" />
+      <config projectName="High_Performance_Server" targetName="ExperimentalConfigure" />
+      <config projectName="High_Performance_Server" targetName="ExperimentalTest" />
+      <config projectName="High_Performance_Server" targetName="ExperimentalCoverage" />
+      <config projectName="High_Performance_Server" targetName="Experimental" />
+      <config projectName="High_Performance_Server" targetName="NightlyBuild" />
+      <config projectName="High_Performance_Server" targetName="Nightly" />
+      <config projectName="High_Performance_Server" targetName="NightlyStart" />
+      <config projectName="High_Performance_Server" targetName="ExperimentalUpdate" />
+      <config projectName="High_Performance_Server" targetName="a.out" />
+      <config projectName="High_Performance_Server" targetName="ContinuousStart" />
+      <config projectName="High_Performance_Server" targetName="NightlyMemoryCheck" />
+      <config projectName="High_Performance_Server" targetName="ContinuousSubmit" />
+      <config projectName="High_Performance_Server" targetName="Continuous" />
+      <config projectName="High_Performance_Server" targetName="ContinuousTest" />
+      <config projectName="High_Performance_Server" targetName="server_server" />
+      <config projectName="High_Performance_Server" targetName="ExperimentalMemCheck" />
+      <config projectName="High_Performance_Server" targetName="ContinuousConfigure" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -63,174 +68,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65ea18a1-24eb-4eea-87aa-573423f99119" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/base/Buffer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/base/Buffer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/EventLoop.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/EventLoop.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/SocketOpts.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/SocketOpts.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/t01.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/zhangzhilong.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/zhangzhilong.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/client/client.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/3.16.5/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/3.16.5/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/3.16.5/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/3.16.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/3.16.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/Client.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/Client.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/Client.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/Client.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/Client.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/Client.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/Client.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/High_Performance_Server.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/High_Performance_Server.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/High_Performance_Server.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/High_Performance_Server.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/High_Performance_Server.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/High_Performance_Server.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/High_Performance_Server.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/High_Performance_Server.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-centos7_64_1/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.6/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/DependInfo-NSConflict-ZHANG_Zhilong-mac10.15.4.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/build-NSConflict-ZHANG_Zhilong-mac10.15.4.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/flags-NSConflict-ZHANG_Zhilong-mac10.15.4.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/includes_CXX.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Client.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/DependInfo-NSConflict-ZHANG_Zhilong-mac10.15.4.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/build-NSConflict-ZHANG_Zhilong-mac10.15.4.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/includes_CXX.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/High_Performance_Server.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile-NSConflict-ZHANG_Zhilong-mac10.15.4.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2-NSConflict-ZHANG_Zhilong-mac10.15.4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories-NSConflict-ZHANG_Zhilong-mac10.15.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log-NSConflict-ZHANG_Zhilong-mac10.15.4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/server.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/server.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/server.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/server.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/server.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/server.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/server.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/server.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/server.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server-NSConflict-ZHANG_Zhilong-mac10.15.4.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/High_Performance_Server.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile-NSConflict-ZHANG_Zhilong-mac10.15.4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Server" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/client" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/epoll/.server.cc.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/epoll/include/wrap.cc" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/epoll/include/wrap.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/epoll/include/wrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/epoll/include/wrap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/epoll_nonblock_io/include/wrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/epoll_nonblock_io/include/wrap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/epoll_nonblock_io/wrap.cc" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/epoll_nonblock_io/wrap.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/multi_progress_server/include/wrap.cc" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/multi_progress_server/include/wrap.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/multi_progress_server/include/wrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/multi_progress_server/include/wrap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/multi_thread_server/include/wrap.cc" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/multi_thread_server/include/wrap.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/concurrence_server/multi_thread_server/include/wrap.h" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/concurrence_server/multi_thread_server/include/wrap.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/3.16.6/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/epoll_unblock/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/epoll_unblock/High_Performance_Server" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/epoll_unblock/High_Performance_Server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/history_version/failed/include/request_data.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/history_version/failed/include/request_data.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server_simple.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requestData.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/requestData.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requestData.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/requestData.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/this_epoll.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/this_epoll.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/this_epoll.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/this_epoll.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/this_util.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/this_util.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/this_util.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/this_util.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/threadpool.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/threadpool.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/threadpool.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/threadpool.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,6 +92,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -251,6 +104,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-Debug-server_net" />
   </component>
   <component name="ProjectId" id="1bpmjQgYwaIV2wqxd0Ij1s6RAi6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -328,7 +184,43 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunAnythingCache">
+    <myKeys>
+      <visibility group="Gradle tasks" flag="true" />
+      <visibility group="Grunt tasks" flag="true" />
+      <visibility group="Gulp tasks" flag="true" />
+      <visibility group="Recent projects" flag="true" />
+      <visibility group="Run configurations" flag="true" />
+      <visibility group="npm" flag="true" />
+      <visibility group="yarn" flag="true" />
+    </myKeys>
+  </component>
+  <component name="RunManager" selected="CMake Application.a.out">
+    <configuration name="a.out" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="High_Performance_Server" TARGET_NAME="a.out" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="High_Performance_Server" RUN_TARGET_NAME="a.out">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="server_base" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="High_Performance_Server" TARGET_NAME="server_base" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="server_net" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="High_Performance_Server" TARGET_NAME="server_net" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="server_server" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="High_Performance_Server" TARGET_NAME="server_server" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="t01" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="High_Performance_Server" TARGET_NAME="t01" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="High_Performance_Server" RUN_TARGET_NAME="t01">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in get-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http">
       <method v="2" />
     </configuration>
@@ -345,6 +237,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="CMake Application.a.out" />
+      <item itemvalue="CMake Application.server_server" />
+      <item itemvalue="CMake Application.server_base" />
+      <item itemvalue="CMake Application.server_net" />
+      <item itemvalue="CMake Application.t01" />
       <item itemvalue="HTTP 请求.All in get-requests" />
       <item itemvalue="HTTP 请求.All in http" />
       <item itemvalue="HTTP 请求.All in rest-api" />
@@ -397,7 +294,9 @@
       <workItem from="1592383218120" duration="2041000" />
       <workItem from="1592386171692" duration="461000" />
       <workItem from="1592386638824" duration="158000" />
-      <workItem from="1592386805381" duration="76000" />
+      <workItem from="1592386805381" duration="4233000" />
+      <workItem from="1592452644093" duration="179000" />
+      <workItem from="1592452832954" duration="428000" />
     </task>
     <task id="LOCAL-00001" summary="默认的">
       <created>1589795013445</created>
@@ -472,9 +371,10 @@
     <state x="54" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1344.817@0.23.1344.817" timestamp="1592386139408" />
     <state x="93" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog/40.23.1304.817@40.23.1304.817" timestamp="1589634645123" />
     <state x="91" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/41.23.1239.777@41.23.1239.777" timestamp="1590396533422" />
-    <state x="485" y="193" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589792936629">
-      <screen x="62" y="0" width="1218" height="720" />
+    <state x="467" y="242" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592387075980">
+      <screen x="0" y="23" width="1344" height="817" />
     </state>
+    <state x="467" y="242" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1344.817@0.23.1344.817" timestamp="1592387075980" />
     <state x="491" y="242" key="#com.intellij.fileTypes.FileTypeChooser/37.23.1307.817@37.23.1307.817" timestamp="1589370855021" />
     <state x="492" y="242" key="#com.intellij.fileTypes.FileTypeChooser/38.23.1306.817@38.23.1306.817" timestamp="1589469325277" />
     <state x="493" y="242" key="#com.intellij.fileTypes.FileTypeChooser/40.23.1304.817@40.23.1304.817" timestamp="1589549844238" />

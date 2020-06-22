@@ -5,5 +5,5 @@ target_link_libraries(server_server pthread)
 
 install (TARGETS server_server DESTINATION lib)
 file(GLOB HEADERS "*.h")
-install (FILES ${HEADERS} DESTINATION include/server)
+install (FILES ${HEADERS} DESTINATION include/src)
 
